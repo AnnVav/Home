@@ -60,3 +60,72 @@ body{
         font-size:30px;
     }
 }
+/* GALLERY PAGE */
+.gallery{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:#FAF9F6;
+    position:relative;
+}
+
+.artwork{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+}
+
+.artwork.active{
+    display:flex;
+}
+
+.artwork img{
+    max-width:80vw;
+    max-height:70vh;
+    object-fit:contain;
+    user-select:none;
+}
+
+/* INFO TEXTE */
+.info{
+    margin-top:15px;
+    font-size:14px;
+    color:#6D6660;
+    text-align:center;
+}
+
+/* NAVIGATION */
+.nav{
+    position:absolute;
+    bottom:40px;
+    display:flex;
+    gap:30px;
+}
+
+.nav button{
+    background:none;
+    border:none;
+    font-size:28px;
+    cursor:pointer;
+    color:#3F3C3A;
+}
+
+.nav button:hover{
+    color:#8A6A52;
+}
+
+/* BACK LINK */
+.back{
+    position:absolute;
+    top:30px;
+    text-decoration:none;
+    font-size:14px;
+    color:#3F3C3A;
+    opacity:0.5;
+}
+
+.back:hover{
+    opacity:1;
+}
