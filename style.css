@@ -1,0 +1,61 @@
+body{
+    margin:0;
+    background:#FAF9F6;
+    font-family: "Georgia", serif;
+    color:#3F3C3A;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    gap:20px;
+    padding:20px;
+}
+
+/* IMAGE */
+.hero img{
+    width:80vw;
+    max-width:1100px;
+    height:60vh;
+    object-fit:cover;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* NOM */
+.name{
+    font-size:42px;
+    text-decoration:none;
+    color:#3F3C3A;
+    letter-spacing:1px;
+}
+
+/* ROLE (très discret) */
+.role{
+    font-size:10px;
+    letter-spacing:2px;
+    opacity:0.15;
+    margin-top:-10px;
+}
+
+/* hover subtil */
+.name:hover{
+    color:#8A6A52;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .hero img{
+        width:95vw;
+        height:55vh;
+    }
+
+    .name{
+        font-size:32px;
+    }
+}
