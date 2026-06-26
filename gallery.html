@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Annick Vavasseur | Works</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="gallery">
+
+    <div class="artwork active">
+        <img src="annick-vavasseur-le-present-2021.jpg" alt="Artwork 1">
+        <div class="info">
+            Le Présent, 2021<br>
+            Acrylic on canvas
+        </div>
+    </div>
+
+    <div class="nav">
+        <button onclick="prev()">←</button>
+        <button onclick="next()">→</button>
+    </div>
+
+    <a class="back" href="index.html">Annick Vavasseur</a>
+
+</div>
+
+<script>
+let index = 0;
+const artworks = document.querySelectorAll(".artwork");
+
+function show(i){
+    artworks.forEach(a => a.classList.remove("active"));
+    artworks[i].classList.add("active");
+}
+
+function next(){
+    index = (index + 1) % artworks.length;
+    show(index);
+}
+
+function prev(){
+    index = (index - 1 + artworks.length) % artworks.length;
+    show(index);
+}
+</script>
+
+</body>
+</html>
