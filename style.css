@@ -5,41 +5,55 @@ body{
     color:#3F3C3A;
 }
 
-/* PAGE ACCUEIL */
+/* FULL SCREEN HOME */
+body{
+    margin:0;
+    background:#FAF9F6;
+    font-family: Georgia, serif;
+    overflow:hidden;
+}
+
 .hero{
+    position:relative;
+    width:100vw;
     height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:80px;
-    padding:40px;
 }
 
-/* IMAGE */
+/* IMAGE FULL SCREEN */
 .hero img{
-    width:70vw;
-    max-width:900px;
-    height:70vh;
+    width:100vw;
+    height:100vh;
     object-fit:cover;
-    cursor:pointer;
+    display:block;
+    user-select:none;
 }
 
-/* BLOC TEXTE À DROITE */
+/* NOM EN BAS À DROITE */
 .name{
-    font-size:42px;
+    position:absolute;
+    bottom:60px;
+    right:60px;
+    font-size:40px;
     text-decoration:none;
-    color:#3F3C3A;
+    color:#FAF9F6;
     letter-spacing:1px;
-    text-align:left;
+    transition:0.3s;
 }
 
-/* ROLE */
+/* petit décalage élégant */
+.name:hover{
+    color:#D8C3A5;
+}
+
+/* ROLE TRÈS DISCRET sous le nom */
 .role{
+    position:absolute;
+    bottom:35px;
+    right:60px;
     font-size:10px;
     letter-spacing:2px;
-    opacity:0.12;
-    margin-top:6px;
-    text-align:left;
+    opacity:0.4;
+    color:#FAF9F6;
 }
 }
 
