@@ -1,10 +1,11 @@
 body{
     margin:0;
     background:#FAF9F6;
-    font-family: "Georgia", serif;
+    font-family: Georgia, serif;
     color:#3F3C3A;
 }
 
+/* PAGE ACCUEIL */
 .hero{
     height:100vh;
     display:flex;
@@ -12,7 +13,7 @@ body{
     justify-content:center;
     align-items:center;
     text-align:center;
-    gap:20px;
+    gap:18px;
     padding:20px;
 }
 
@@ -32,19 +33,19 @@ body{
     text-decoration:none;
     color:#3F3C3A;
     letter-spacing:1px;
+    transition:0.3s;
 }
 
-/* ROLE (très discret) */
+.name:hover{
+    color:#8A6A52;
+}
+
+/* ROLE (TRÈS DISCRET) */
 .role{
     font-size:10px;
     letter-spacing:2px;
-    opacity:0.15;
-    margin-top:-10px;
-}
-
-/* hover subtil */
-.name:hover{
-    color:#8A6A52;
+    opacity:0.12;
+    margin-top:-8px;
 }
 
 /* MOBILE */
@@ -56,6 +57,6 @@ body{
     }
 
     .name{
-        font-size:32px;
+        font-size:30px;
     }
 }
