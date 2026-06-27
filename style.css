@@ -45,4 +45,11 @@ body {
 /* lien */
 a {
   text-decoration: none;
+
+  @media (max-width: 768px) {
+  .text {
+    right: 20px;
+    bottom: 30px;
+  }
+}
 }
