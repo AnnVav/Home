@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Gallery</title>
 
-<title>Portfolio | Annick Vavasseur</title>
-
-<meta name="description" content="Portfolio of Annick Vavasseur, Contemporary Artist. Selected works.">
-
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="gallery">
+<div class="cursor"></div>
 
-  <div class="item">
-    <img src="images/annick-vavasseur-paysage-interieur-I-2016.jpg" alt="Annick Vavasseur artwork 1">
-    <p>Untitled 01 — Acrylic on canvas</p>
+<!-- COVER -->
+<div class="cover">
+  <div class="text">
+    <div class="name">Ann Vavasseur</div>
+    <div class="subtitle">Le Présent</div>
   </div>
-
-  <div class="item">
-    <img src="images/annick-vavasseur-back-home-2025.jpg" alt="Annick Vavasseur artwork 2">
-    <p>Untitled 02 — Inner landscape</p>
-  </div>
-
-  <div class="item">
-    <img src="images/annick-vavasseur-l-ile-aux-dragons-2017.jpg" alt="Annick Vavasseur artwork 3">
-    <p>Untitled 03 — Study of light</p>
-  </div>
-
-  <div class="item">
-    <img src="images/annick-vavasseur-de-l-autre-cote-2025.jpg" alt="Annick Vavasseur artwork 4">
-    <p>Untitled 04 — Acrylic composition</p>
-  </div>
-
-  <div class="item">
-    <img src="images/annick-vavasseur-la-maree-2022.jpg" alt="Annick Vavasseur artwork 5">
-    <p>Untitled 05 — Visual exploration</p>
-  </div>
-
-  <div class="item">
-    <img src="images/annick-vavasseur-l-ailleurs-ici-2022.jpg" alt="Annick Vavasseur artwork 6">
-    <p>Untitled 06 — Inner landscape study</p>
-  </div>
-
 </div>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <img src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c" alt="">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="">
+  <img src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c" alt="">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="">
+</section>
+
+<!-- JAVASCRIPT -->
+<script>
+/* CURSOR */
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+/* SCROLL REVEAL */
+const images = document.querySelectorAll(".gallery img");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+images.forEach(img => observer.observe(img));
+</script>
 
 </body>
 </html>
