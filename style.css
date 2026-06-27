@@ -7,7 +7,7 @@ body {
 .cover {
   position: relative;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 
   background-image: url("https://raw.githubusercontent.com/AnnVav/Home/main/annick-vavasseur-le-present-2021-cover.jpg");
   background-size: cover;
