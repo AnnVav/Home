@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Annick Vavasseur | Works</title>
+<title>Portfolio | Annick Vavasseur</title>
+
+<meta name="description" content="Portfolio of Annick Vavasseur, Contemporary Artist. Selected works.">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,42 +15,37 @@
 
 <div class="gallery">
 
-    <div class="artwork active">
-        <img src="annick-vavasseur-le-present-2021.jpg" alt="Artwork 1">
-        <div class="info">
-            Le Présent, 2021<br>
-            Acrylic on canvas
-        </div>
-    </div>
+  <div class="item">
+    <img src="images/oeuvre1.jpg" alt="Annick Vavasseur artwork 1">
+    <p>Untitled 01 — Acrylic on canvas</p>
+  </div>
 
-    <div class="nav">
-        <button onclick="prev()">←</button>
-        <button onclick="next()">→</button>
-    </div>
+  <div class="item">
+    <img src="images/oeuvre2.jpg" alt="Annick Vavasseur artwork 2">
+    <p>Untitled 02 — Inner landscape</p>
+  </div>
 
-    <a class="back" href="index.html">Annick Vavasseur</a>
+  <div class="item">
+    <img src="images/oeuvre3.jpg" alt="Annick Vavasseur artwork 3">
+    <p>Untitled 03 — Study of light</p>
+  </div>
+
+  <div class="item">
+    <img src="images/oeuvre4.jpg" alt="Annick Vavasseur artwork 4">
+    <p>Untitled 04 — Acrylic composition</p>
+  </div>
+
+  <div class="item">
+    <img src="images/oeuvre5.jpg" alt="Annick Vavasseur artwork 5">
+    <p>Untitled 05 — Visual exploration</p>
+  </div>
+
+  <div class="item">
+    <img src="images/oeuvre6.jpg" alt="Annick Vavasseur artwork 6">
+    <p>Untitled 06 — Inner landscape study</p>
+  </div>
 
 </div>
-
-<script>
-let index = 0;
-const artworks = document.querySelectorAll(".artwork");
-
-function show(i){
-    artworks.forEach(a => a.classList.remove("active"));
-    artworks[i].classList.add("active");
-}
-
-function next(){
-    index = (index + 1) % artworks.length;
-    show(index);
-}
-
-function prev(){
-    index = (index - 1 + artworks.length) % artworks.length;
-    show(index);
-}
-</script>
 
 </body>
 </html>
