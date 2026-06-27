@@ -10,7 +10,7 @@ body {
   height: 100vh;
   width: 100%;
 
-  background-image: url("annick-vavasseur-le-present-2021.jpg");
+  background-image: url("images/annick-vavasseur-le-present-2021.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@ body {
 /* NOM */
 .name {
   color: #6D6660;
-  font-size: 62px;
+  font-size: 52px;
   font-weight: 600;
   line-height: 1;
 }
@@ -37,7 +37,7 @@ body {
 /* SOUS-TITRE */
 .subtitle {
   color: #F6D6660;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 400;
   margin-top: 6px;
 }
