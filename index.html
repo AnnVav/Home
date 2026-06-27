@@ -5,7 +5,17 @@
   <title>Annick Vavasseur</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  
+<div class="cursor"></div>
 
+<script>
+document.addEventListener("mousemove", (e) => {
+  const cursor = document.querySelector(".cursor");
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+</script
+  
 <body>
 
 <div class="cursor"></div>
