@@ -9,7 +9,7 @@ body {
   height: 100vh;
   width: 100%;
 
-  background-image: url("https://github.com/AnnVav/Home/blob/main/annick-vavasseur-le-present-2021-cover.jpg");
+  background-image: url("https://raw.githubusercontent.com/AnnVav/Home/main/annick-vavasseur-le-present-2021-cover.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,8 +35,8 @@ body {
 
 /* SOUS-TITRE */
 .subtitle {
-  color: #F6D6660;
-  font-size: 34px;
+  color: #6D6660;
+  font-size: 20px;
   font-weight: 400;
   margin-top: 6px;
 }
