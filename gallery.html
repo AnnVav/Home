@@ -6,30 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Gallery</title>
 </head>
-<script>
-/* CURSOR */
-const cursor = document.querySelector(".cursor");
 
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-
-/* IMAGE REVEAL */
-const images = document.querySelectorAll(".gallery img");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible");
-    }
-  });
-}, {
-  threshold: 0.15
-});
-
-images.forEach(img => observer.observe(img));
-</script>
 <body>
 
 <!-- CURSOR -->
@@ -40,43 +17,44 @@ images.forEach(img => observer.observe(img));
 
 <!-- GALLERY -->
 <section class="gallery">
-    <img src="images/annick-vavasseur-paysage-interieur-I-2016.jpg" alt="Annick Vavasseur artwork 1">
-    <img src="images/annick-vavasseur-back-home-2025.jpg" alt="Annick Vavasseur artwork 2">
-    <img src="images/annick-vavasseur-l-ile-aux-dragons-2017.jpg" alt="Annick Vavasseur artwork 3">
-    <img src="images/annick-vavasseur-de-l-autre-cote-2025.jpg" alt="Annick Vavasseur artwork 4">
-    <img src="images/annick-vavasseur-la-maree-2022.jpg" alt="Annick Vavasseur artwork 5">
-    <img src="images/annick-vavasseur-l-ailleurs-ici-2022.jpg" alt="Annick Vavasseur artwork 6">
+  <img src="images/annick-vavasseur-paysage-interieur-I-2016.jpg" alt="">
+  <img src="images/annick-vavasseur-back-home-2025.jpg" alt="">
+  <img src="images/annick-vavasseur-l-ile-aux-dragons-2017.jpg" alt="">
+  <img src="images/annick-vavasseur-de-l-autre-cote-2025.jpg" alt="">
+  <img src="images/annick-vavasseur-la-maree-2022.jpg" alt="">
+  <img src="images/annick-vavasseur-l-ailleurs-ici-2022.jpg" alt="">
 </section>
 
-<!-- JS (OBLIGATOIRE) -->
+<!-- JS PROPRE -->
 <script>
-console.log("JS OK");
+document.addEventListener("DOMContentLoaded", () => {
 
-/* CURSOR */
-const cursor = document.querySelector(".cursor");
+  console.log("JS OK");
 
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
+  /* CURSOR */
+  const cursor = document.querySelector(".cursor");
 
-/* ANIMATION IMAGES */
-const images = document.querySelectorAll(".gallery img");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible");
-    }
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
   });
-}, { threshold: 0.1 });
 
-images.forEach(img => observer.observe(img));
-</script>
+  /* IMAGE REVEAL */
+  const images = document.querySelectorAll(".gallery img");
 
-</body>
-</html>
-images.forEach(img => observer.observe(img));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  images.forEach(img => observer.observe(img));
+
+});
 </script>
 
 </body>
