@@ -37,9 +37,11 @@ body {
 /* SOUS-TITRE */
 .subtitle {
   color: #6D6660;
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 6px;
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+  margin-top: 8px;
 }
 
 /* lien */
