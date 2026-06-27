@@ -1,71 +1,48 @@
-/* BASE */
 body {
   margin: 0;
-  font-family: EB Garamond, serif;
   background: #FAF9F6;
-  color: #3F3C3A;
+  font-family: Arial, sans-serif;
 }
 
-/* SUPPRIME STYLE LIEN */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* =========================
-   INDEX (cover page)
-========================= */
-
+/* IMAGE DE FOND */
 .hero {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url("images/annick-vavasseur-le-present-2016.jpg");
+
+  background-image: url("images/cover.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.signature {
+/* TEXTE GLOBAL */
+.text {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   right: 60px;
-  color: #6D6660; /* gris marron par défaut */
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  font-weight: 300;
-  transition: color 0.3s ease;
+  text-align: right;
 }
 
-/* hover effet */
-.signature:hover {
-  color: #FAF9F6; /* blanc cassé */
-}
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 20px;
-}
-
-.item {
-  margin-bottom: 70px;
-}
-
-.item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.item p {
-  margin-top: 10px;
-  font-size: 13px;
+/* NOM */
+.name {
   color: #6D6660;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* SOUS-TITRE */
+.subtitle {
+  color: #FAF9F6;
+  font-size: 14px;
   font-weight: 300;
-  letter-spacing: 0.3px;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+/* lien propre */
+a {
+  text-decoration: none;
+  color: inherit;
 }
