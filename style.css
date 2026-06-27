@@ -52,4 +52,25 @@ a {
     bottom: 30px;
   }
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px; /* clé du rendu uniforme */
+  object-fit: cover;
+  display: block;
+}
+
+  @media (max-width: 600px) {
+  .gallery img {
+    height: 180px;
+  }
+
+  .gallery {
+    gap: 8px;
+  }
 }
