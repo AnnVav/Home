@@ -10,7 +10,7 @@ body {
   height: 100vh;
   width: 100%;
 
-  background-image: "main/images/annick-vavasseur-le-present-2021.jpg";
+  background-image: "/images/annick-vavasseur-le-present-2021.jpg";
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
