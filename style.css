@@ -30,15 +30,16 @@ a {
   position: absolute;
   bottom: 40px;
   right: 60px;
-  color: #6D6660;
+  color: #6D6660; /* gris marron par défaut */
   font-size: 14px;
   letter-spacing: 0.5px;
   font-weight: 300;
+  transition: color 0.3s ease;
 }
 
-/* effet clic global */
-.cover-link {
-  display: block;
+/* hover effet */
+.signature:hover {
+  color: #FAF9F6; /* blanc cassé */
 }
 
 /* =========================
