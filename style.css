@@ -6,7 +6,7 @@ body {
 }
 
 .cover {
-  position: relative;
+  display: block;
   height: 100vh;
   width: 100vw;
 
@@ -15,6 +15,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #FAF9F6;
+  position: relative
  }
 
 /* TEXTE */
