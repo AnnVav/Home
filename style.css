@@ -3,6 +3,23 @@ body {
   padding: 0;
   background: #FAF9F6;
   font-family: "EB Garamond", serif;
+  body {
+  cursor: none;
+}
+.cursor {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #6D6660;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out;
+  z-index: 9999;
+  opacity: 0.8;
+}
 }
 
 .cover {
