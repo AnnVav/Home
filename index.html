@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Annick Vavasseur | Contemporary Artist</title>
-
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Annick Vavasseur</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<a href="gallery.html" class="cover">
+<div class="cursor"></div>
 
+<!-- COVER (PAGE 1) -->
+<section class="cover">
   <div class="text">
     <div class="name">Annick Vavasseur</div>
     <div class="subtitle">Contemporary Artist</div>
   </div>
+</section>
 
-</a>
+<!-- GALLERY (PAGE 2) -->
+<section class="gallery">
+  <img src="IMAGE1.jpg" alt="">
+  <img src="IMAGE2.jpg" alt="">
+  <img src="IMAGE3.jpg" alt="">
+  <img src="IMAGE4.jpg" alt="">
+</section>
 
-</body>
-</html>
-  </div>
+<!-- JS -->
+<script>
+const cursor = document.querySelector(".cursor");
 
-</a>
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+</script>
 
 </body>
 </html>
