@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #FAF9F6;
+  background: #6D5F52;
   font-family: "EB Garamond", serif;
   cursor: none;
   overflow-x: hidden;
@@ -9,14 +9,15 @@ body {
 
 /* CURSOR */
 .cursor {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #6D6660;
+  width: 28px;
+  height: 28px;
   position: fixed;
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
+
+  background: url("pen.svg") no-repeat center;
+  background-size: contain;
 }
 
 /* COVER */
