@@ -22,23 +22,25 @@ body {
   bottom: 50px;
   right: 60px;
   text-align: right;
+  font-family: "EB Garamond", serif;
 }
 
-/* NOM */
+/* NOM (grand + gras) */
 .name {
   color: #6D6660;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 38px;
+  font-weight: 600;
   letter-spacing: 0.5px;
+  line-height: 1;
 }
 
-/* SOUS-TITRE */
+/* SOUS-TITRE (plus discret) */
 .subtitle {
   color: #FAF9F6;
-  font-size: 14px;
-  font-weight: 300;
-  margin-top: 5px;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 6px;
+  letter-spacing: 0.8px;
 }
 
 /* lien propre */
