@@ -131,20 +131,40 @@ body {
    (léger rythme visuel)
 ========================= */
 
-.artwork.left {
-  align-items: flex-start;
-  padding-left: 8vw;
-}
-
-.artwork.right {
-  align-items: flex-end;
-  padding-right: 8vw;
-}
-
-.artwork.center {
+.artwork {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
+
+  flex-direction: column;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
 }
 
+/* apparition */
+.artwork.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* image propre */
+.artwork img {
+  max-height: 75vh;
+  max-width: 85vw;
+  object-fit: contain;
+  display: block;
+}
+
+/* titre */
+.title {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #746C65;
+}
 /* =========================
    MOBILE
 ========================= */
