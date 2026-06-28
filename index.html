@@ -7,7 +7,6 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Font option (clean + elegant) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
@@ -15,69 +14,77 @@
 
 <body>
 
+<!-- MENU -->
 <nav class="main-nav">
-    <a href="gallery.html">Portfolio</a>
-    <a href="biography.html">Biography</a>
-    <a href="exhibitions.html">Exhibitions</a>
-    <a href="contact.html">Contact</a>
+  <a href="gallery.html">Portfolio</a>
+  <a href="biography.html">Biography</a>
+  <a href="exhibitions.html">Exhibitions</a>
+  <a href="contact.html">Contact</a>
 </nav>
-  
-  <!-- CURSOR (optional) -->
+
+<!-- CURSOR -->
 <div class="cursor">
   <span></span>
   <span></span>
   <span></span>
 </div>
 
-  <!-- HERO / FIRST VIEW -->
- <section class="hero">
+<!-- HERO -->
+<section class="hero">
 
   <img class="hero-image" src="annick-vavasseur-le-present-2022-cover.jpg" alt="Artwork">
 
   <h1 class="artist-name">
     Annick<br>Vavasseur
   </h1>
-   
+
 </section>
 
-  <!-- GALLERY -->
-  <section class="gallery">
+<!-- GALLERY -->
+<section class="gallery">
 
-    <div class="artwork center">
-      <img src="images/annick-vavasseur-paysage-interieur-I-2016.jpg" alt="Annick Vavasseur artwork 1">
-      <div class="title">Paysage-Interieur-I</div>
-    </div>
-<div class="gallery">
+  <div class="artwork center">
+    <img src="images/annick-vavasseur-paysage-interieur-I-2016.jpg" alt="">
+    <div class="title">Paysage intérieur I (2016)</div>
+    <div class="meta">Acrylic on canvas</div>
+  </div>
 
-    <div class="artwork right">
-      <img src="images/annick-vavasseur-back-home-2025.jpg" alt="Annick Vavasseur artwork 2">
-      <div class="title">Back Home</div>
-    </div>
+  <div class="artwork right">
+    <img src="images/annick-vavasseur-back-home-2025.jpg" alt="">
+    <div class="title">Back Home (2025)</div>
+    <div class="meta">Acrylic on canvas</div>
+  </div>
 
-    <div class="artwork left">
-      <img src="images/annick-vavasseur-l-ile-aux-dragons-2017.jpg" alt="Annick Vavasseur artwork 3">
-      <div class="title">L ile aux Dragons</div>
-    </div>
+  <div class="artwork left">
+    <img src="images/annick-vavasseur-l-ile-aux-dragons-2017.jpg" alt="">
+    <div class="title">L’île aux Dragons (2017)</div>
+    <div class="meta">Acrylic on canvas</div>
+  </div>
 
-    <div class="artwork center">
-      <img src="images/annick-vavasseur-de-l-autre-cote-2025.jpg" alt="Annick Vavasseur artwork 4">
-      <div class="title">De l autre cote</div>
-    </div>
+  <div class="artwork center">
+    <img src="images/annick-vavasseur-de-l-autre-cote-2025.jpg" alt="">
+    <div class="title">De l’autre côté (2025)</div>
+    <div class="meta">Acrylic on canvas</div>
+  </div>
 
-    <div class="artwork right">
-      <img src="images/annick-vavasseur-la-maree-2022.jpg" alt="Annick Vavasseur artwork 5">
-      <div class="title">La Maree</div>
-    </div>
+  <div class="artwork right">
+    <img src="images/annick-vavasseur-la-maree-2022.jpg" alt="">
+    <div class="title">La Marée (2022)</div>
+    <div class="meta">Acrylic on canvas</div>
+  </div>
 
-    <div class="artwork left">
-      <img src="images/annick-vavasseur-l-ailleurs-ici-2022.jpg" alt="Annick Vavasseur artwork 6">
-      <div class="title">L Ailleurs Ici</div>
-    </div>
+  <div class="artwork left">
+    <img src="images/annick-vavasseur-l-ailleurs-ici-2022.jpg" alt="">
+    <div class="title">L’Ailleurs ici (2022)</div>
+    <div class="meta">Acrylic on canvas</div>
+  </div>
 
-  </section>
+</section>
 
- <script>
+<!-- JS -->
+<script>
 
+/* MENU scroll */
 const nav = document.querySelector(".main-nav");
 
 window.addEventListener("scroll", () => {
@@ -87,10 +94,8 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("visible");
   }
 });
-   
-/* =========================
-   CURSOR (1 seule version)
-========================= */
+
+/* CURSOR */
 const cursor = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -98,12 +103,8 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.top = e.clientY + "px";
 });
 
-
-/* =========================
-   APPARITION AU SCROLL
-========================= */
-
-const artworks = document.querySelectorAll(".item");
+/* SCROLL ANIMATION */
+const artworks = document.querySelectorAll(".artwork");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -119,6 +120,8 @@ const observer = new IntersectionObserver((entries) => {
 artworks.forEach(art => {
   observer.observe(art);
 });
+
 </script>
+
 </body>
 </html>
