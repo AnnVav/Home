@@ -96,6 +96,40 @@ body {
   text-shadow: 0 1px 8px rgba(255,255,255,0.25);
 }
 
+.main-nav {
+    position: fixed;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 55px;
+
+    z-index: 1000;
+}
+
+.main-nav a {
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: #4A433D;
+
+    opacity: 0.85;
+
+    transition: opacity .35s ease;
+}
+
+.main-nav a:hover {
+
+    opacity: .45;
+
+}
+
 /* =========================
    GALLERY (SCROLL EXPO)
 ========================= */
@@ -117,14 +151,12 @@ body {
   position: relative;
 
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
+    transition: opacity 2s ease;
 }
 
 /* apparition au scroll */
 .artwork.visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* IMAGE */
