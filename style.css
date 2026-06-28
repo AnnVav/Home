@@ -358,5 +358,14 @@ body {
     padding-left: 24px;
 }
 
+       .biography p {
+    margin-bottom: 22px;
+    line-height: 1.7;
+}
+
+.biography strong {
+    color: var(--text);
+    font-weight: 500;
+}
    
 }
