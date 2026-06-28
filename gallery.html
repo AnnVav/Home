@@ -114,7 +114,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* IMAGE REVEAL */
-  const images = document.querySelectorAll(".gallery img");
+ document.addEventListener("DOMContentLoaded", () => {
+
+  const artworks = document.querySelectorAll(".artwork");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -125,10 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }, {
     threshold: 0.1
   });
-
-  images.forEach(img => observer.observe(img));
-
+  artworks.forEach(art => observer.observe(art));
 });
+  
 </script>
 <script>
 document.addEventListener("contextmenu", (e) => {
