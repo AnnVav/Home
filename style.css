@@ -203,7 +203,8 @@ body {
 .artwork img {
   display: block;
   margin: 0 auto;
-  max-width: 82vw;
+  max-width: 82vw !important;
+  max-width: 300px !important;
   max-height: 78vh;
   width: auto;
   height: auto;
