@@ -27,15 +27,19 @@ body {
 ========================= */
 
 .cursor {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: var(--text-soft);
+
+  background: rgba(120, 110, 100, 0.5);
+  box-shadow: 0 0 18px rgba(200, 190, 180, 0.35);
+   
   position: fixed;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  mix-blend-mode: multiply;
   z-index: 9999;
+
+  box-shadow: 0 0 12px rgba(74, 67, 61, 0.25);
 }
 
 /* =========================
