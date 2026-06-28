@@ -198,13 +198,15 @@ body {
   justify-content: center;
   align-items: center;
 
+  text-align: center;
+
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 2s ease, transform 2s ease;
 }
 
 /* apparition (IMPORTANT) */
-.artwork.visible {
+.artwork.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
