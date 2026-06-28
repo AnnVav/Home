@@ -295,5 +295,46 @@ body {
   font-size: 1rem;
   color: var(--text);
 }
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    margin-top: 70px;
+    max-width: 600px;
+}
+
+.contact-name {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.contact-subtitle {
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+
+.contact-info {
+    margin-bottom: 18px;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: var(--text);
+    text-decoration: none;
+    transition: opacity .3s ease;
+}
+
+.contact-info a:hover {
+    opacity: .6;
+}
    
 }
