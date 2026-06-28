@@ -97,17 +97,25 @@ body {
 }
 
 .main-nav {
-    position: fixed;
-    top: 35px;
-    left: 50%;
-    transform: translateX(-50%);
+  position: fixed;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
 
-    display: flex;
-    gap: 55px;
+  display: flex;
+  gap: 55px;
 
-    z-index: 1000;
+  z-index: 1000;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
 }
 
+.main-nav.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 .main-nav a {
 
     font-family: "Inter", sans-serif;
