@@ -192,8 +192,13 @@ body {
 
 /* CHAQUE ŒUVRE */
 .artwork {
-  height: 100vh;
-  width: 100%;
+  max-width: 85vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 
   display: flex;
   flex-direction: column;
