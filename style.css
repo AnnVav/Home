@@ -184,80 +184,57 @@ body {
 }
 
 /* CHAQUE ŒUVRE = 1 ÉCRAN */
-.artwork {
+
+.gallery {
+  width: 100%;
+  padding-top: 28vh;
+}
+
+/* CHAQUE ŒUVRE */
+.item {
   height: 100vh;
   width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  position: relative;
-
   opacity: 0;
-    transition: opacity 2s ease;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
 }
 
-/* apparition au scroll */
-.artwork.visible {
-  opacity: 1;
-}
-
-/* IMAGE */
-.artwork img {
-  max-height: 75vh;
-  max-width: 85vw;
-  object-fit: contain;
-  display: block;
-}
-
-/* TITRE ŒUVRE */
-.title {
-  margin-top: 18px;
-  font-size: 0.95rem;
-  color: var(--text-soft);
-  letter-spacing: 0.5px;
-}
-
-/* =========================
-   VARIATIONS POSITIONNELLES
-   (léger rythme visuel)
-========================= */
-
-.artwork {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  flex-direction: column;
-
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-}
-
-/* apparition */
-.artwork.visible {
+/* apparition (IMPORTANT) */
+.item.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* image propre */
-.artwork img {
+/* IMAGE */
+.item img {
   max-height: 75vh;
   max-width: 85vw;
   object-fit: contain;
   display: block;
 }
 
-/* titre */
+/* TITRE */
 .title {
-  margin-top: 16px;
+  margin-top: 18px;
   font-size: 0.95rem;
-  color: #746C65;
+  color: var(--text);
 }
+
+/* META */
+.meta {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 /* =========================
    MOBILE
 ========================= */
