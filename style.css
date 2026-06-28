@@ -56,7 +56,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 240px;
+  height: 140px;
   background: linear-gradient(
     to bottom,
     rgba(231,226,218,0) 0%,
@@ -86,7 +86,7 @@ body {
 
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   line-height: 1.1;
   text-align: right;
 
@@ -102,7 +102,7 @@ body {
 
 .gallery {
   width: 100%;
-  padding-top:18vh;
+  padding-top:28vh;
 }
 
 /* CHAQUE ŒUVRE = 1 ÉCRAN */
