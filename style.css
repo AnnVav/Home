@@ -191,7 +191,7 @@ body {
 }
 
 /* CHAQUE ŒUVRE */
-.item {
+.artwork {
   height: 100vh;
   width: 100%;
 
@@ -206,7 +206,7 @@ body {
 }
 
 /* apparition (IMPORTANT) */
-.item.visible {
+.artwork.visible {
   opacity: 1;
   transform: translateY(0);
 }
