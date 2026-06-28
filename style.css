@@ -336,5 +336,27 @@ body {
 .contact-info a:hover {
     opacity: .6;
 }
+
+.biography {
+    max-width: 760px;
+    margin-top: 60px;
+    line-height: 1.9;
+    color: var(--text);
+}
+
+.biography p {
+    margin-bottom: 28px;
+}
+
+.biography blockquote {
+    margin-top: 60px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--text-soft);
+    border-left: 2px solid var(--line);
+    padding-left: 24px;
+}
+
    
 }
