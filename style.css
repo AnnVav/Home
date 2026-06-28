@@ -186,10 +186,6 @@ body {
 /* CHAQUE ŒUVRE */
 .artwork {
   width: 100%;
-   
-.artwork {
-  opacity: 1 !important;
-  transform: none !important;
 }
   display: flex;
   flex-direction: column;
