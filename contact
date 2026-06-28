@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Annick Vavasseur</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="main-nav visible">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Portfolio</a>
+    <a href="biography.html">Biography</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section class="page">
+
+    <h1 class="page-title">Contact</h1>
+
+    <div class="contact">
+
+        <h2 class="contact-name">
+            Annick Vavasseur
+        </h2>
+
+        <p class="contact-subtitle">
+            Contemporary Painter
+        </p>
+
+        <p class="contact-info">
+            <a href="mailto:avmdeco@gmail.com">avmdeco@gmail.com</a>
+        </p>
+
+        <p class="contact-info">
+            +33 7 86 76 11 27
+        </p>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>
