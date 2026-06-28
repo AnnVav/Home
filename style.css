@@ -183,13 +183,6 @@ body {
   padding-top:28vh;
 }
 
-/* CHAQUE ŒUVRE = 1 ÉCRAN */
-
-.gallery {
-  width: 100%;
-  padding-top: 28vh;
-}
-
 /* CHAQUE ŒUVRE */
 .artwork {
   max-width: 85vw;
@@ -220,6 +213,8 @@ body {
 .item img {
   max-height: 75vh;
   max-width: 85vw;
+  width: auto;
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -229,6 +224,7 @@ body {
   margin-top: 18px;
   font-size: 0.95rem;
   color: var(--text);
+  letter-spacing: 0.5px; 
 }
 
 /* META */
