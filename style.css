@@ -72,12 +72,10 @@ body {
   line-height: 1.1;
   text-align: right;
 
-  color: var(--text);
+  color: rgba(231, 226, 218, 0.9);
 
-  /* zone de sécurité visuelle */
-  padding: 10px 14px;
-  background: rgba(231, 226, 218, 0.35);
-  backdrop-filter: blur(4px);
+  /* important pour lisibilité sur image */
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* =========================
