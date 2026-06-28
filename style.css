@@ -81,8 +81,8 @@ body {
 /* NOM EN BAS DROITE */
 .artist-name {
   position: absolute;
-  bottom: 70px;
-  right: 70px;
+  bottom: 90px;
+  right: 90px;
 
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
@@ -90,10 +90,10 @@ body {
   line-height: 1.1;
   text-align: right;
 
-  color: rgba(248,245,239,0.82);
+  color: #4A433D;
 
   /* important pour lisibilité sur image */
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 8px rgba(255,255,255,0.25);
 }
 
 /* =========================
