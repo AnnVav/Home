@@ -359,32 +359,75 @@ body {
     margin-bottom:70px;
 
 }
+/* ==========================================
+   BIOGRAPHY / ARTIST STATEMENT
+   ========================================== */
 
-.biography{
+.page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:140px 30px 100px;
+    box-sizing:border-box;
+}
+
+.page-title{
+    font-family:'Cormorant Garamond', serif;
+    font-size:2.8rem;
+    font-weight:300;
+    text-align:center;
+    letter-spacing:0.05em;
+    color:#3f3f3f;
+    margin:0 0 70px;
+}
+
+.text-column{
     width:100%;
     max-width:760px;
     margin:0 auto;
-   
-   .page-title{
+}
+
+.text-column p{
     font-family:'Cormorant Garamond', serif;
-    font-size:2.4rem;
+    font-size:1.45rem;
     font-weight:300;
-    letter-spacing:.08em;
-    margin-bottom:60px;
-} 
-}
-
-.biography p{
-    font-family:'Inter', sans-serif;
-    font-size:1.08rem;
-    line-height:2.05;
+    line-height:1.9;
     text-align:justify;
-    margin-bottom:2.2rem;
+    color:#444;
+    margin:0 0 2.2rem;
+}
+.text-column p:last-child{
+    margin-bottom:0;
 }
 
-.biography strong {
-    color: var(--text);
-    font-weight: 500;
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width:768px){
+
+    .page{
+        padding:110px 25px 70px;
+    }
+
+    .page-title{
+        font-size:2.2rem;
+        margin-bottom:50px;
+    }
+
+    .text-column{
+        max-width:100%;
+    }
+
+    .text-column p{
+        font-size:1.25rem;
+        line-height:1.8;
+        text-align:left;
+    }
+
 }
- 
+
+   
 }
