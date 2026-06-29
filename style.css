@@ -337,30 +337,41 @@ body {
     opacity: .6;
 }
 
-.biography {
-    max-width: 760px;
-    margin-top: 60px;
-    line-height: 1.9;
-    color: var(--text);
+.page{
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:120px 30px 100px;
+
 }
 
-.biography p {
-    margin-bottom: 28px;
+.page-title{
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:3rem;
+    font-weight:300;
+    text-align:center;
+
+    margin-bottom:70px;
+
 }
 
-.biography blockquote {
-    margin-top: 60px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.35rem;
-    font-style: italic;
-    color: var(--text-soft);
-    border-left: 2px solid var(--line);
-    padding-left: 24px;
+.biography{
+    width:100%;
+    max-width:760px;
+    margin:0 auto;
 }
 
-       .biography p {
-    margin-bottom: 22px;
-    line-height: 1.7;
+.biography p{
+    font-family:'Inter', sans-serif;
+    font-size:1.08rem;
+    line-height:2.05;
+    text-align:justify;
+    margin-bottom:2.2rem;
 }
 
 .biography strong {
