@@ -20,24 +20,19 @@ body {
   color: var(--text);
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
-}
-
-body {
   cursor: none;
 }
 
 /* =========================
-   CURSOR (OPTIONNEL)
+   CURSOR
 ========================= */
 
 .cursor {
   position: fixed;
   top: 0;
   left: 0;
-
   display: flex;
   gap: 3px;
-
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
@@ -47,102 +42,31 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-
   background: rgba(74, 67, 61, 0.6);
   box-shadow: 0 0 10px rgba(120, 110, 100, 0.25);
-
   animation: float 1.6s infinite ease-in-out;
 }
 
-/* petit effet “poussière vivante” */
-.cursor span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.cursor span:nth-child(3) {
-  animation-delay: 0.4s;
-}
+.cursor span:nth-child(2) { animation-delay: 0.2s; }
+.cursor span:nth-child(3) { animation-delay: 0.4s; }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateY(-3px);
-    opacity: 0.3;
-  }
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(-3px); opacity: 0.3; }
 }
 
 /* =========================
-   HERO (PAGE 1)
+   NAV
 ========================= */
-
-.hero {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-/* petit effet de sortie du hero */
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 140px;
-  background: linear-gradient(
-    to bottom,
-    rgba(231,226,218,0) 0%,
-    rgba(231,226,218,0.35) 40%,
-    rgba(231,226,218,0.75) 75%,
-    #E7E2DA 100%
-);
-  pointer-events: none;
-}
-
-.hero-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* NOM EN BAS DROITE */
-.artist-name {
-  position: absolute;
-  bottom: 90px;
-  right: 90px;
-
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
-  font-size: 2.2rem;
-  line-height: 1.1;
-  text-align: right;
-
-  color: #4A433D;
-
-  /* important pour lisibilité sur image */
-  text-shadow: 0 1px 8px rgba(255,255,255,0.25);
-}
 
 .main-nav {
   position: fixed;
   top: 35px;
   left: 50%;
   transform: translateX(-50%);
-
   display: flex;
   gap: 55px;
-
   z-index: 1000;
-
   opacity: 0;
   pointer-events: none;
   transition: opacity 1.2s ease;
@@ -152,53 +76,77 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
+
 .main-nav a {
-
-    font-family: "Inter", sans-serif;
-    font-size: 0.78rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    text-decoration: none;
-
-    color: #4A433D;
-
-    opacity: 0.85;
-
-    transition: opacity .35s ease;
+  font-family: "Inter", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text);
+  opacity: 0.85;
+  transition: opacity .35s ease;
 }
 
 .main-nav a:hover {
-
-    opacity: .45;
-
+  opacity: .45;
 }
 
 /* =========================
-   GALLERY (SCROLL EXPO)
+   HERO (NE PAS TOUCHER COVER)
+========================= */
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.artist-name {
+  position: absolute;
+  bottom: 90px;
+  right: 90px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  color: #4A433D;
+}
+
+/* =========================
+   GALLERY
 ========================= */
 
 .gallery {
   width: 100%;
-  padding-top:28vh;
-}
-
-/* CHAQUE ŒUVRE */
-
-.artwork {
-  max-width: 82vw;
-
+  padding-top: 28vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+/* ŒUVRES */
+.artwork {
+  width: 100%;
+  max-width: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-
   padding: 140px 0;
 
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.8s ease, transform 1.8s ease;
+  transform: translateY(35px);
+  transition: opacity 1.6s ease, transform 1.6s ease;
 }
 
 .artwork.is-visible {
@@ -206,22 +154,22 @@ body {
   transform: translateY(0);
 }
 
+/* IMAGE */
 .artwork img {
   display: block;
-  margin: 0 auto;
-  max-width: 82vw;
+  width: 100%;
+  max-width: 100%;
   max-height: 78vh;
-  width: auto;
-  height: auto;
   object-fit: contain;
+
+  transition: transform 1.2s ease, opacity 1.2s ease;
 }
 
 /* TITRE */
 .title {
   margin-top: 18px;
   font-size: 0.95rem;
-  color: var(--text);
-  letter-spacing: 0.5px; 
+  letter-spacing: 0.5px;
 }
 
 /* META */
@@ -231,6 +179,59 @@ body {
   color: var(--text-soft);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* =========================
+   PAGE TEXTE (BIO / STATEMENT / ETC)
+========================= */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 140px 30px 100px;
+}
+
+/* TITRE */
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #3f3f3f;
+  margin-bottom: 70px;
+}
+
+/* COLONNE TEXTE */
+.text-column {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.text-column p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.9;
+  text-align: justify;
+  color: #444;
+  margin-bottom: 2.2rem;
+}
+
+.text-column p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   CONTACT (OPTIONNEL GARDÉ)
+========================= */
+
+.contact {
+  margin-top: 70px;
+  max-width: 600px;
 }
 
 /* =========================
@@ -245,189 +246,26 @@ body {
     font-size: 1.6rem;
   }
 
-  .artwork img {
+  .gallery {
+    padding-top: 20vh;
+  }
+
+  .artwork {
     max-width: 92vw;
-    max-height: 70vh;
+    padding: 100px 0;
   }
 
-  .artwork.left,
-  .artwork.right {
-    align-items: center;
-    padding: 0;
+  .page {
+    padding: 110px 25px 70px;
   }
 
-.page {
-  padding: 180px 10vw;
-  color: var(--text);
-}
-
-/* TITRE */
-.page-title {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 80px;
-  letter-spacing: 1px;
-}
-
-/* TIMELINE */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-/* EVENT */
-.event {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-/* ANNÉE */
-.year {
-  font-size: 0.9rem;
-  color: var(--text-soft);
-  letter-spacing: 2px;
-}
-
-/* INFO */
-.info {
-  font-size: 1rem;
-  color: var(--text);
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-    margin-top: 70px;
-    max-width: 600px;
-}
-
-.contact-name {
-    font-family: "Cormorant Garamond", serif;
+  .page-title {
     font-size: 2.2rem;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 8px;
-}
-
-.contact-subtitle {
-    color: var(--text-soft);
-    font-size: 0.95rem;
-    letter-spacing: 1px;
     margin-bottom: 50px;
-}
+  }
 
-.contact-info {
-    margin-bottom: 18px;
-    color: var(--text);
-    font-size: 1rem;
-}
-
-.contact-info a {
-    color: var(--text);
-    text-decoration: none;
-    transition: opacity .3s ease;
-}
-
-.contact-info a:hover {
-    opacity: .6;
-}
-
-.page{
-
-    min-height:100vh;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
-    padding:120px 30px 100px;
-
-}
-
-.page-title{
-
-    font-family:'Cormorant Garamond', serif;
-    font-size:3rem;
-    font-weight:300;
-    text-align:center;
-
-    margin-bottom:70px;
-
-}
-/* ==========================================
-   BIOGRAPHY / ARTIST STATEMENT
-   ========================================== */
-
-.page{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:140px 30px 100px;
-    box-sizing:border-box;
-}
-
-.page-title{
-    font-family:'Cormorant Garamond', serif;
-    font-size:2.8rem;
-    font-weight:300;
-    text-align:center;
-    letter-spacing:0.05em;
-    color:#3f3f3f;
-    margin:0 0 70px;
-}
-
-.text-column{
-    width:100%;
-    max-width:760px;
-    margin:0 auto;
-}
-
-.text-column p{
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.45rem;
-    font-weight:300;
-    line-height:1.9;
-    text-align:justify;
-    color:#444;
-    margin:0 0 2.2rem;
-}
-.text-column p:last-child{
-    margin-bottom:0;
-}
-
-
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
-
-@media (max-width:768px){
-
-    .page{
-        padding:110px 25px 70px;
-    }
-
-    .page-title{
-        font-size:2.2rem;
-        margin-bottom:50px;
-    }
-
-    .text-column{
-        max-width:100%;
-    }
-
-    .text-column p{
-        font-size:1.25rem;
-        line-height:1.8;
-        text-align:left;
-    }
-
-}
-
-   
+  .text-column p {
+    font-size: 1.2rem;
+    text-align: left;
+  }
 }
