@@ -18,6 +18,8 @@
 
 <body>
 
+<div class="cursor"></div>
+
 <nav class="main-nav visible">
     <a href="index.html">Home</a>
     <a href="gallery.html">Portfolio</a>
