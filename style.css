@@ -243,6 +243,15 @@ body {
   margin-bottom: 0;
 }
 
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 180px 30px 100px;
+}
+
 .exhibitions-column {
   width: 100%;
   max-width: 720px;
@@ -253,10 +262,13 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.05rem;
   font-weight: 300;
-  line-height: 1.9;
+  line-height: 1.8;
   text-align: center;
   color: var(--text);
-  margin-bottom: 1.6rem;
+  text-align: left;
+  margin: 0;
+}
+margin-bottom: 1.6rem;
 }
 
 /* année = plus discrète */
