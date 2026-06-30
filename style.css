@@ -159,7 +159,7 @@ body {
   display: block;
   width: 100%;
   max-width: 100%;
-  max-height: 78vh;
+  max-height: 82vh;
   object-fit: contain;
 
   transition: transform 1.2s ease, opacity 1.2s ease;
