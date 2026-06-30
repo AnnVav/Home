@@ -84,6 +84,38 @@
 
 </section>
 
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  console.log("JS OK");
+
+  /* CURSOR */
+  const cursor = document.querySelector(".cursor");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+
+  /* IMAGE REVEAL */
+  const artworks = document.querySelectorAll(".artwork");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  artworks.forEach(art => observer.observe(art));
+
+});
+</script>
+
+  
 <!-- FOOTER -->
 <section class="site-footer" id="contact">
 
@@ -101,33 +133,6 @@
 </section>
 
 <script src="script.js"></script>
-<script>
-document.addEventListener("mousemove", (e) => {
-  const cursor = document.querySelector(".cursor");
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-</script>
-
-/* SCROLL ANIMATION */
-const artworks = document.querySelectorAll(".artwork");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible");
-    }
-  });
-}, {
-  threshold: 0.05,
-  rootMargin: "0px 0px -10% 0px"
-});
-
-artworks.forEach(art => {
-  observer.observe(art);
-});
-
-</script>
 
 </body>
 </html>
