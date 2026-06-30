@@ -396,24 +396,23 @@ html {
    CONTACT (OPTIONNEL GARDÉ)
 ========================= */
 
-{
 .contact {
   margin-top: 70px;
   max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* centre horizontalement */
-    align-items: center;     /* centre verticalement */
-    min-height: 100vh;
-    margin: 0;
-    gap: 12px;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+  margin: 0;
 }
-}
+
 
 /* =========================
    MOBILE
