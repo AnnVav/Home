@@ -253,10 +253,9 @@ body {
 }
 
 .exhibitions-column {
-  width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  outline: 1px solid red;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .exhibitions-column p {
