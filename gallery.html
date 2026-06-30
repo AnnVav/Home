@@ -99,7 +99,6 @@
 
 </section>
 
-<!-- JS PROPRE -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -114,8 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* IMAGE REVEAL */
- document.addEventListener("DOMContentLoaded", () => {
-
   const artworks = document.querySelectorAll(".artwork");
 
   const observer = new IntersectionObserver((entries) => {
@@ -125,24 +122,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.1
+    threshold: 0.15
   });
-  artworks.forEach(art => observer.observe(art));
-});
-  
-</script>
-<script>
-document.addEventListener("contextmenu", (e) => {
-  if (e.target.tagName === "IMG") {
-    e.preventDefault();
-  }
-});
 
-document.addEventListener("dragstart", (e) => {
-  if (e.target.tagName === "IMG") {
-    e.preventDefault();
-  }
+  artworks.forEach(art => observer.observe(art));
+
 });
 </script>
+  
 </body>
 </html>
