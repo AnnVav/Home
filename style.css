@@ -231,6 +231,30 @@ body {
   opacity: 0.6;
 }
 
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 120px 30px 60px;
+}
+
+.footer-text {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text);
+  letter-spacing: 0.2px;
+}
+
+.copyright {
+  margin-top: 30px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;   /* plus petit */
+  color: var(--text-soft);
+  letter-spacing: 0.5px;
+  opacity: 0.75;
+}
+
+
 /* =========================
    PAGE TEXTE (BIO / STATEMENT / EXHIBITIONS)
 ========================= */
