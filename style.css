@@ -23,9 +23,6 @@ body {
   cursor: none;
 }
 
-/* =========================
-   CURSOR
-========================= */
 
 /* =========================
    CURSOR — CERCLE FIN
@@ -35,6 +32,9 @@ body {
   cursor: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .cursor {
   position: fixed;
   top: 0;
@@ -63,15 +63,16 @@ body {
 
 .main-nav {
   position: fixed;
-  top: 35px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  gap: 55px;
   z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 1.2s ease;
+  display: flex;
+  gap: 50px;
+  background: rgba(241, 238, 232, 0.6);
+  backdrop-filter: blur(6px);
+  padding: 8px 18px;
+  border-radius: 20px;
 }
 
 .main-nav.visible {
