@@ -27,32 +27,34 @@ body {
    CURSOR
 ========================= */
 
+/* =========================
+   CURSOR — CERCLE FIN
+========================= */
+
+body {
+  cursor: none;
+}
+
 .cursor {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  gap: 3px;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-}
-
-.cursor span {
-  width: 4px;
-  height: 4px;
+  width: 22px;          /* taille du cercle */
+  height: 22px;
+  border: 1.2px solid rgba(74, 67, 61, 0.55); /* fin mais visible */
   border-radius: 50%;
-  background: rgba(74, 67, 61, 0.6);
-  box-shadow: 0 0 10px rgba(120, 110, 100, 0.25);
-  animation: float 1.6s infinite ease-in-out;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+
+  transition: width 0.15s ease, height 0.15s ease, opacity 0.2s ease;
 }
 
-.cursor span:nth-child(2) { animation-delay: 0.2s; }
-.cursor span:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); opacity: 0.6; }
-  50% { transform: translateY(-3px); opacity: 0.3; }
+/* petit effet au hover (optionnel mais élégant) */
+.cursor.hover {
+  width: 30px;
+  height: 30px;
+  border-color: rgba(74, 67, 61, 0.35);
 }
 
 /* =========================
