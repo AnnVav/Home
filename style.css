@@ -225,6 +225,36 @@ body {
   margin-bottom: 0;
 }
 
+.exhibitions-column {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.exhibitions-column p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.9;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 1.6rem;
+}
+
+/* année = plus discrète */
+.exhibitions-column .year {
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  color: var(--text-soft);
+  margin-bottom: 0.3rem;
+}
+
+/* séparation douce entre blocs */
+.exhibitions-column .block {
+  margin-bottom: 2.8rem;
+}
+
 /* =========================
    CONTACT (OPTIONNEL GARDÉ)
 ========================= */
