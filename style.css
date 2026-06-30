@@ -392,6 +392,7 @@ html {
    CONTACT (OPTIONNEL GARDÉ)
 ========================= */
 
+{
 .contact {
   margin-top: 70px;
   max-width: 600px;
@@ -399,20 +400,15 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center; /* centre horizontalement */
     align-items: center;     /* centre verticalement */
     min-height: 100vh;
     margin: 0;
+    gap: 12px;
     text-align: center;
     font-family: 'Inter', sans-serif;
 }
-
-form {
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
 }
 
 /* =========================
