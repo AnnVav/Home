@@ -397,6 +397,22 @@ html {
   max-width: 600px;
 }
 
+body {
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+    min-height: 100vh;
+    margin: 0;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 /* =========================
    MOBILE
 ========================= */
