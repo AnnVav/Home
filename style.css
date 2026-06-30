@@ -256,6 +256,11 @@ body {
   opacity: 0.75;
 }
 
+.site-footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 
 /* =========================
    PAGE TEXTE (BIO / STATEMENT / EXHIBITIONS)
