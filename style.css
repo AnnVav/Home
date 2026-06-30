@@ -176,7 +176,7 @@ body {
 }
 
 /* =========================
-   META (BASE)
+   META BASE
 ========================= */
 
 .meta {
@@ -186,41 +186,35 @@ body {
   color: var(--text-soft);
 }
 
-/* MEDIUM */
-.meta.medium {
-  font-size: 0.9rem; /* un peu plus lisible */
-  color: var(--text);
-  letter-spacing: 0.3px;
-  margin-top: 8px;
-}
-
-/* SIZE */
+/* MEDIUM + SIZE (même style) */
+.meta.medium,
 .meta.size {
-  font-size: 0.88rem;
+  font-size: 0.8rem;        /* un peu plus petit */
   letter-spacing: 0.3px;
-  color: var(--text);
+  color: var(--text-soft);  /* même couleur */
+  margin-top: 6px;
 }
 
 /* STATUS */
 .meta.status {
-  font-size: 0.72rem;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 1.2px;
+  text-transform: none;
   margin-top: 10px;
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
-/* RESERVED */
+/* reserved */
 .meta.status.reserved {
   color: var(--text-soft);
 }
 
-/* AVAILABLE */
+/* available */
 .meta.status.available {
   color: var(--text-soft);
 }
 
-/* PRIVATE */
+/* private collection */
 .meta.status.private {
   color: var(--text-soft);
   opacity: 0.6;
