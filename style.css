@@ -177,7 +177,7 @@ body {
   display: block;
   width: 100%;
   max-width: 100%;
-  max-height: 82vh;
+  max-height: 90vh;
   object-fit: contain;
 
   transition: opacity 1.4s ease; /* on simplifie */
