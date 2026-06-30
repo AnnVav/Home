@@ -196,7 +196,6 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 0.65rem;
   color: var(--text-soft);
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
