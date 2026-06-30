@@ -166,7 +166,7 @@ body {
   padding: 120px 0;
 
   opacity: 1; /* IMPORTANT : visible sans JS */
-  transition: opacity 1.6s ease;
+  transition: opacity 1.9s ease;
 }
 
 .artwork.is-visible {
