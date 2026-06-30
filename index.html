@@ -31,7 +31,7 @@
 <!-- HERO / HOME -->
 <section class="hero" id="home">
   <img class="hero-image" src="annick-vavasseur-le-present-2022-cover.jpg" alt="Artwork">
-  <div class="artist-name">Annick Vavasseur</div>
+  <div class="artist-name">Annick<br>Vavasseur</div>
 </section>
 
 <section class="gallery" id="gallery">
@@ -96,7 +96,49 @@
   </div>
 
 </section>
-  
+
+  <script>
+
+/* MENU scroll */
+const nav = document.querySelector(".main-nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > window.innerHeight * 0.9) {
+    nav.classList.add("visible");
+  } else {
+    nav.classList.remove("visible");
+  }
+});
+
+/* CURSOR */
+<script>
+document.addEventListener("mousemove", (e) => {
+  const cursor = document.querySelector(".cursor");
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+</script>
+
+/* SCROLL ANIMATION */
+const artworks = document.querySelectorAll(".artwork");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+    }
+  });
+}, {
+  threshold: 0.05,
+  rootMargin: "0px 0px -10% 0px"
+});
+
+artworks.forEach(art => {
+  observer.observe(art);
+});
+
+</script>
+
 <!-- FOOTER -->
 <section class="site-footer" id="contact">
 
