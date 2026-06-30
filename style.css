@@ -140,18 +140,9 @@ body {
 }
 
 /* =========================
-   GALLERY
+   ARTWORK
 ========================= */
 
-.gallery {
-  width: 100%;
-  padding-top: 30vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ŒUVRES */
 .artwork {
   width: 100%;
   max-width: 65vw;
@@ -159,28 +150,22 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 120px 0;
 
-  padding: 120px 0; 
-
-  opacity: 0;
-  transform: translateY(0);
-  transition: opacity 1.6s ease; 
+  opacity: 1; /* IMPORTANT : visible sans JS */
+  transition: opacity 1.6s ease;
 }
 
 .artwork.is-visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* IMAGE */
 .artwork img {
   display: block;
   width: 100%;
-  max-width: 100%;
   max-height: 90vh;
   object-fit: contain;
-
-  transition: opacity 1.4s ease; /* on simplifie */
 }
 
 /* TITRE */
@@ -190,47 +175,39 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* META */
-.meta {
-  margin-top: 6px;
-  font-family: "Inter", sans-serif;
-  font-size: 0.65rem;
-  color: var(--text-soft);
-  letter-spacing: 0.5px;
-}
-
 /* =========================
-   GALLERY META STYLES
+   META (BASE)
 ========================= */
 
 .meta {
   font-family: "Inter", sans-serif;
   text-align: center;
+  margin-top: 4px;
   color: var(--text-soft);
 }
 
-/* médium (un peu plus présent) */
+/* MEDIUM */
 .meta.medium {
-  font-size: 0.86rem;
+  font-size: 0.9rem; /* un peu plus lisible */
   color: var(--text);
   letter-spacing: 0.3px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
-/* taille */
+/* SIZE */
 .meta.size {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   letter-spacing: 0.3px;
-  margin-top: 2px;
+  color: var(--text);
 }
 
-/* statut général (discret) */
+/* STATUS */
 .meta.status {
   font-size: 0.72rem;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-top: 10px;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 /* RESERVED */
@@ -243,10 +220,10 @@ body {
   color: var(--text-soft);
 }
 
-/* PRIVATE COLLECTION */
+/* PRIVATE */
 .meta.status.private {
   color: var(--text-soft);
-  opacity: 0.75;
+  opacity: 0.6;
 }
 
 /* =========================
