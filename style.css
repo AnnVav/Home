@@ -167,7 +167,8 @@ html {
   text-align: center;
 
   opacity: 0;
-  transition: opacity 1.2s ease;
+  transform: translateY(0); /* important : aucun mouvement */
+  transition: opacity 1.4s ease;
 }
 
 .artwork.is-visible {
