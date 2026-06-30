@@ -249,7 +249,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 180px 30px 100px;
+  padding: 180px 100px 100px;
 }
 
 .exhibitions-column {
