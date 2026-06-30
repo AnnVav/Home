@@ -208,7 +208,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 140px 30px 100px;
+  padding: 140px 100px 100px;
 }
 
 /* TITRE */
