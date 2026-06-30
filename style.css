@@ -200,6 +200,56 @@ body {
 }
 
 /* =========================
+   GALLERY META STYLES
+========================= */
+
+.meta {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: var(--text-soft);
+}
+
+/* médium (un peu plus présent) */
+.meta.medium {
+  font-size: 0.86rem;
+  color: var(--text);
+  letter-spacing: 0.3px;
+  margin-top: 6px;
+}
+
+/* taille */
+.meta.size {
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+
+/* statut général (discret) */
+.meta.status {
+  font-size: 0.72rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* RESERVED */
+.meta.status.reserved {
+  color: var(--text-soft);
+}
+
+/* AVAILABLE */
+.meta.status.available {
+  color: var(--text-soft);
+}
+
+/* PRIVATE COLLECTION */
+.meta.status.private {
+  color: var(--text-soft);
+  opacity: 0.75;
+}
+
+/* =========================
    PAGE TEXTE (BIO / STATEMENT / EXHIBITIONS)
 ========================= */
 
