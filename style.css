@@ -193,10 +193,11 @@ body {
 /* META */
 .meta {
   margin-top: 6px;
-  font-size: 0.75rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.65rem;
   color: var(--text-soft);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 /* =========================
