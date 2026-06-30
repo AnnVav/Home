@@ -160,11 +160,11 @@ body {
   align-items: center;
   text-align: center;
 
-  padding: 200px 0; /* ↑ effet scroll plus lent visuel */
+  padding: 120px 0; 
 
   opacity: 0;
   transform: translateY(0); /* ❌ suppression du mouvement */
-  transition: opacity 2.4s ease; /* ✔ fade plus lent */
+  transition: opacity 2.2s ease; /* ✔ fade plus lent */
 }
 
 .artwork.is-visible {
