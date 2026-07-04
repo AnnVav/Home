@@ -356,6 +356,14 @@ html {
   margin-bottom: 0;
 }
 
+.statement {
+  max-width: 720px;
+}
+
+.statement p {
+  margin-bottom: 32px;
+}
+
 /* =========================
    EXHIBITIONS
 ========================= */
