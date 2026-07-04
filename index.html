@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+
   <title>Annick Vavasseur | French Contemporary Painter</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
@@ -18,69 +20,63 @@
 <nav class="main-nav visible">
    <a href="index.html">Home</a>
    <a href="#gallery">Works</a>
-  <a href="biography.html">Biography</a>
-  <a href="statement.html">Statement</a>
-  <a href="exhibitions.html">Exhibitions</a>
-  <a href="contact.html">Contact</a>
+   <a href="biography.html">Biography</a>
+   <a href="statement.html">Statement</a>
+   <a href="exhibitions.html">Exhibitions</a>
+   <a href="contact.html">Contact</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <img class="hero-image" src="annick-vavasseur-le-present-2022-cover.jpg" alt="Artwork">
+  <img class="hero-image" src="annick-vavasseur-le-present-2022-cover.jpg" alt="">
   <div class="artist-name">Annick<br>Vavasseur</div>
 </section>
 
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
 
-  <div class="artwork i1">
-    <img src="images/annick-vavasseur-paysage-interieur-I-2016.jpg">
-    <img src="image.jpg" loading="lazy" alt="">
+  <div class="artwork">
+    <img src="images/annick-vavasseur-paysage-interieur-I-2016.jpg" alt="">
     <div class="title">Paysage intérieur I (2016)</div>
     <div class="meta medium">Acrylic on canvas</div>
     <div class="meta size">73 × 60 cm</div>
     <div class="meta status reserved">Reserved</div>
   </div>
 
-  <div class="artwork i2">
-    <img class="landscape" src="images/annick-vavasseur-back-home-2025.jpg">
-    <img src="image.jpg" loading="lazy" alt="">
+  <div class="artwork">
+    <img class="landscape" src="images/annick-vavasseur-back-home-2025.jpg" alt="">
     <div class="title">Back Home (2025)</div>
     <div class="meta medium">Acrylic on canvas</div>
     <div class="meta size">50 × 70 cm</div>
     <div class="meta status available">Available</div>
   </div>
 
-  <div class="artwork i3">
-    <img src="images/annick-vavasseur-l-ile-aux-dragons-2017.jpg">
-    <img src="image.jpg" loading="lazy" alt="">
+  <div class="artwork">
+    <img src="images/annick-vavasseur-l-ile-aux-dragons-2017.jpg" alt="">
     <div class="title">L’Île aux Dragons (2017)</div>
     <div class="meta medium">Acrylic on canvas</div>
     <div class="meta size">65 × 54 cm</div>
     <div class="meta status available">Available</div>
   </div>
 
-  <div class="artwork i4">
-    <img class="landscape" src="images/annick-vavasseur-de-l-autre-cote-2025.jpg">
-    <img src="image.jpg" loading="lazy" alt="">
+  <div class="artwork">
+    <img class="landscape" src="images/annick-vavasseur-de-l-autre-cote-2025.jpg" alt="">
     <div class="title">De l’autre côté (2025)</div>
     <div class="meta medium">Acrylic on canvas</div>
     <div class="meta size">50 × 70 cm</div>
     <div class="meta status available">Available</div>
   </div>
 
-  <div class="artwork i5">
-    <img src="images/annick-vavasseur-la-maree-2022.jpg">
-    <img src="image.jpg" loading="lazy" alt="">
+  <div class="artwork">
+    <img src="images/annick-vavasseur-la-maree-2022.jpg" alt="">
     <div class="title">La Marée (2022)</div>
     <div class="meta medium">Acrylic on canvas</div>
     <div class="meta size">116 × 89 cm</div>
     <div class="meta status available">Available</div>
   </div>
 
-  <div class="artwork i6">
-    <img class="landscape" src="images/annick-vavasseur-l-ailleurs-ici-2022.jpg">
-    <img src="image.jpg" loading="lazy" alt="">
+  <div class="artwork">
+    <img class="landscape" src="images/annick-vavasseur-l-ailleurs-ici-2022.jpg" alt="">
     <div class="title">L’Ailleurs, ici (2022)</div>
     <div class="meta medium">Acrylic on canvas</div>
     <div class="meta size">81 × 65 cm</div>
@@ -89,37 +85,23 @@
 
 </section>
 
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
+<!-- FOOTER -->
+<section class="site-footer" id="contact">
 
-  console.log("JS OK");
+  <div class="footer-text">
+    For acquisition inquiries,<br>
+    commission requests, or exhibition opportunities,<br>
+    <a href="contact.html" class="footer-link">please get in touch.</a>
+  </div>
 
-  /* CURSOR */
-  const cursor = document.querySelector(".cursor");
+  <div class="copyright">
+    © 2026 Annick Vavasseur<br>
+    All works and images © the artist
+  </div>
 
-  document.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-  });
+</section>
 
-  /* IMAGE REVEAL */
-  const artworks = document.querySelectorAll(".artwork");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-      }
-    });
-  }, {
-    threshold: 0.15
-  });
-
-  artworks.forEach(art => observer.observe(art));
-
-});
-</script>
-
+<!-- JS UNIQUE CLEAN -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -135,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* FADE GALERIE */
+  /* FADE + STAGGER */
   const artworks = document.querySelectorAll(".artwork");
 
   const observer = new IntersectionObserver((entries) => {
@@ -156,26 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
-  
-<!-- FOOTER -->
-<section class="site-footer" id="contact">
-
-  <div class="footer-text">
-    For acquisition inquiries,<br>
-    commission requests, or exhibition opportunities,
-    <br> <a href="contact.html" class="footer-link">
-    please get in touch.
-    </a>.
-  </div>
-
-  <div class="copyright">
-    © 2026 Annick Vavasseur<br>
-    All works and images © the artist
-  </div>
-
-</section>
-
-<script src="script.js"></script>
 
 </body>
 </html>
