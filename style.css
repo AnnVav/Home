@@ -20,8 +20,12 @@ body {
   color: var(--text);
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
+  margin: 0;
 }
 
+body.js-enabled {
+  cursor: none;
+}
 
 /* =========================
    CURSOR — CERCLE FIN
@@ -156,6 +160,7 @@ html {
 }
 
 /* ARTWORK */
+
 .artwork {
   width: 100%;
   max-width: 65vw;
@@ -168,20 +173,13 @@ html {
   text-align: center;
 
   opacity: 0;
-  transform: translateY(0); /* important : aucun mouvement */
   transition: opacity 0.9s ease;
-}
 
-.artwork:hover {
-  opacity: 1;
+  transition-delay: var(--delay, 0ms);
 }
 
 .artwork.is-visible {
   opacity: 1;
-}
-
-.artwork {
-  transition-delay: var(--delay, 0ms);
 }
 
 /* IMAGE */
@@ -402,15 +400,6 @@ html {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-}
-
-body {
-    background: var(--bg);
-  color: var(--text);
-  font-family: "Inter", sans-serif;
-  overflow-x: hidden;
-  cursor: none;
-  margin: 0;
 }
 
 
