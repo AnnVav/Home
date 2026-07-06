@@ -222,11 +222,14 @@ html {
 }
 
 .series {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  margin-top: 6px;
+
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+
   text-transform: uppercase;
   color: var(--text-soft);
-  margin-top: 4px;
+  opacity: 0.75;
 }
 
 .meta.medium,
