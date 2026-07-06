@@ -342,34 +342,34 @@ html {
 /* CLOSE */
 .lightbox-close {
   position: fixed;
-  top: 25px;
-  right: 30px;
+  top: 20px;
+  right: 25px;
   font-size: 28px;
   background: none;
   border: none;
   cursor: pointer;
   color: #4a433d;
+  z-index: 10;
 }
 
 /* NAV ARROWS */
 .lightbox-nav {
   position: fixed;
-  top: 50%;
-  width: 100%;
+  inset: 0;
   display: flex;
   justify-content: space-between;
-  transform: translateY(-50%);
+  align-items: center;
   pointer-events: none;
+  padding: 0 20px;
 }
 
 .lightbox-btn {
   pointer-events: all;
   background: none;
   border: none;
-  font-size: 40px;
+  font-size: 50px;
   color: #4a433d;
   cursor: pointer;
-  padding: 20px;
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
