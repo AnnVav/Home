@@ -262,38 +262,36 @@ html {
 }
 
 /* =========================
-   TYPOGRAPHY GALLERY
+   TYPOGRAPHY GALLERY (scoped)
 ========================= */
 
-.title {
+.artwork .title {
   margin-top: 18px;
   font-size: 0.98rem;
   font-style: italic;
   color: var(--text);
 }
 
-.series {
-  margin-top: 6px;
-
+.artwork .series {
   font-size: 0.72rem;
   letter-spacing: 0.10em;
   text-transform: uppercase;
-
   color: var(--text-soft);
-  opacity: 0.75;
+  margin-top: 6px;
 }
 
-.meta.medium,
-.meta.size {
-  font-size: 0.78rem;
+.artwork .meta {
+  font-size: 0.8rem;
   color: var(--text-soft);
   margin-top: 4px;
 }
 
-.meta.status {
+.artwork .status {
   font-size: 0.65rem;
   margin-top: 10px;
   opacity: 0.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* =========================
