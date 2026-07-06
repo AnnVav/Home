@@ -301,8 +301,11 @@ function updateLightbox() {
   const img = images[currentIndex];
 
   // fade out
-  lbImage.style.opacity = 0;
-
+   lbImage.style.opacity = 0;
+   lbImage.style.transform = "scale(.985)";
+   lbImage.style.opacity = 1;
+   lbImage.style.transform = "scale(1)";
+  
   setTimeout(() => {
     lbImage.src = img.src;
 
