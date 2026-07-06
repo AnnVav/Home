@@ -200,18 +200,20 @@ html {
 }
 
 .scroll-statement {
-  padding: 160px 30px 40px;
+  padding: 180px 30px 60px;
   text-align: center;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.4rem;
-  font-style: italic;
+  font-size: 1.65rem;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.02em;
 
   color: var(--text);
-  opacity: 0;
 
-  transform: translateY(20px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 1.6s ease, transform 1.6s ease;
 }
 
 .scroll-statement.is-visible {
