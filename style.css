@@ -246,13 +246,9 @@ html {
         transform 1.2s ease;
 }
 
-.artwork.is-visible{
-    opacity:1;
-    transform:none;
-}
-
 .artwork.is-visible {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .artwork img {
@@ -262,7 +258,17 @@ html {
 }
 
 .artwork-info {
-  position: absolute;
+  margin-top: 14px;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+
+  pointer-events: none;
+}
+
+.artwork-info {
   bottom: 18px;
   left: 50%;
   transform: translateX(-50%) translateY(8px);
@@ -288,16 +294,19 @@ html {
         opacity .45s ease;
 }
 
-.artwork img:hover{
+.artwork img {
+  cursor: pointer;
+  transition: opacity 0.45s ease, filter 0.45s ease;
+}
 
-    transform:scale(1.01);
-
-    opacity:.97;
+.artwork img:hover {
+  opacity: 0.98;
+  filter: brightness(1.03);
 }
 
 .artwork:hover .artwork-info {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 
 /* =========================
@@ -331,6 +340,10 @@ html {
   opacity: 0.5;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.artwork {
+  will-change: opacity, transform;
 }
 
 /* =========================
@@ -387,7 +400,13 @@ html {
 .lightbox-info {
   margin-top: 18px;
   text-align: center;
-  color: #4a433d;
+  color: #e7e0d8;
+.lb-title,
+.lb-series,
+.lb-meta,
+.lb-status {
+  color: #e7e0d8;
+}
 }
 
 /* CLOSE */
@@ -598,7 +617,6 @@ html {
   }
 
  .artwork-info {
-    position: static;
     transform: none;
     opacity: 1;
     margin-top: 14px;
