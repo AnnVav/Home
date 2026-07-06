@@ -296,17 +296,27 @@ function openLightbox(index) {
   lightbox.classList.add("is-open");
 }
 
-/* UPDATE CONTENT */
 function updateLightbox() {
   const img = images[currentIndex];
 
-  lbImage.src = img.src;
-  lbTitle.textContent = img.dataset.title || "";
-  lbSeries.textContent = img.dataset.series || "";
-  lbMeta.textContent = img.dataset.meta || "";
-  lbStatus.textContent = img.dataset.status || "";
-}
+  // fade out
+  lbImage.style.opacity = 0;
 
+  setTimeout(() => {
+    lbImage.src = img.src;
+
+    lbTitle.textContent = img.dataset.title || "";
+    lbSeries.textContent = img.dataset.series || "";
+    lbMeta.textContent = img.dataset.meta || "";
+    lbStatus.textContent = img.dataset.status || "";
+
+    // fade in
+    requestAnimationFrame(() => {
+      lbImage.style.opacity = 1;
+    });
+
+  }, 200);
+}
 /* NAVIGATION */
 function nextImage() {
   currentIndex = (currentIndex + 1) % images.length;
