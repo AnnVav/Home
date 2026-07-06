@@ -113,7 +113,7 @@ html {
 
 .hero-text {
   position: absolute;
-  right: 90px;
+  right: 70px;
   bottom: 80px;
 
   display: flex;
@@ -139,16 +139,8 @@ html {
   text-align: right;
 }
 
-.artist-name span:first-child {
-  margin-right: 62px;
-}
-
-.artist-name span {
-  display: block;
-}
-
 .hero-title {
-  margin-top: 14px;
+  margin-top: 18px;
 
   font-family: "Cormorant Garamond", serif;
   font-size: 1.7rem;
