@@ -102,14 +102,24 @@ html {
 }
 
 .hero-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: translate(-50%, -50%) scale(1.02);
+
   opacity: 0;
-  transform: scale(1.02);
   transition: opacity 2.2s ease, transform 3s ease;
 }
 
 .hero-image.is-visible {
   opacity: 1;
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .hero-text {
@@ -121,16 +131,6 @@ html {
 .hero-text.is-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.hero-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .hero-text {
@@ -405,9 +405,10 @@ html {
     padding: 8px 12px;
   }
    
-.hero-image{
-    object-fit:contain;
-}
+  .hero-image {
+    object-fit: contain;
+    transform: translate(-50%, -50%) scale(1);
+  }
 
   .artist-name {
     bottom: 20px;
