@@ -221,6 +221,17 @@ html {
   font-style: italic;
 }
 
+.series {
+  margin-top: 6px;
+
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--text-soft);
+  opacity: 0.8;
+}
+
 .meta.medium,
 .meta.size {
   font-size: 0.78rem;
