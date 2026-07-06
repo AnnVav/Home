@@ -301,7 +301,7 @@ html {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: #e6e0d8; /* plus clair que ton brun global */
+  background: #e8e1d8;
   display: flex;
   align-items: center;
   justify-content: center;
