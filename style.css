@@ -219,15 +219,16 @@ html {
   margin-top: 18px;
   font-size: 0.98rem;
   font-style: italic;
+  color: var(--text);
 }
 
 .series {
   margin-top: 6px;
 
   font-size: 0.72rem;
-  letter-spacing: 0.08em;
-
+  letter-spacing: 0.10em;
   text-transform: uppercase;
+
   color: var(--text-soft);
   opacity: 0.75;
 }
