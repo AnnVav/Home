@@ -297,7 +297,7 @@ html {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: #d6cec4;
+  background: rgba(55, 50, 46, 0.96); /* plus profond, plus musée */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -360,14 +360,24 @@ html {
 }
 
 .lightbox-btn {
-  pointer-events: all;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 60px;
   background: none;
   border: none;
-  font-size: 50px;
-  color: #4a433d;
+  color: #e7e0d8;
   cursor: pointer;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  z-index: 10001;
+}
+
+.lightbox-btn.prev {
+  left: 20px;
+}
+
+.lightbox-btn.next {
+  right: 20px;
 }
 
 .lightbox-btn:hover {
