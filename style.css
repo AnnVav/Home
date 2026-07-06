@@ -61,6 +61,7 @@ html {
     background 0.3s ease;
 }
 
+/* INNER DOT */
 .cursor::after {
   content: "";
   position: absolute;
@@ -76,6 +77,21 @@ html {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.25s ease;
+}
+
+.cursor.hover {
+  width: 34px;
+  height: 34px;
+  border-color: rgba(74, 67, 61, 0.25);
+}
+
+.cursor.hover::after {
+  opacity: 1;
+  background: rgba(74, 67, 61, 0.55);
+}
+
+.cursor {
+  backdrop-filter: blur(2px);
 }
 
 /* =========================
