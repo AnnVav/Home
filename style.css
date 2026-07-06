@@ -295,6 +295,119 @@ html {
 }
 
 /* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(64, 59, 55, 0.96); /* #403B37 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+
+  z-index: 999999;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* TEXTES */
+.lightbox-info {
+  text-align: center;
+  color: #F1EEE8;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.lb-title {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.lb-series {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.lb-meta {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.lb-status {
+  font-size: 0.7rem;
+  margin-top: 10px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* CLOSE BUTTON */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #F1EEE8;
+
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .lightbox-image {
+    max-height: 60vh;
+  }
+
+  .lb-title {
+    font-size: 1.1rem;
+  }
+
+  .lb-meta {
+    font-size: 0.8rem;
+  }
+
+  .lightbox-close {
+    font-size: 2.5rem;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+
+/* =========================
    PAGE LAYOUT (BIO / STATEMENT)
 ========================= */
 
