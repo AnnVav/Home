@@ -293,6 +293,22 @@ let currentIndex = 0;
 function openLightbox(index) {
   currentIndex = index;
 
+  const img = images[currentIndex];
+
+  // preload image before showing
+  const preload = new Image();
+  preload.src = img.src;
+
+  // start hidden state
+  lightbox.classList.add("is-opening");
+
+  setTimeout(() => {
+    lightbox.classList.add("is-open");
+    lightbox.classList.remove("is-opening");
+
+    updateLightbox();
+  }, 120);
+}
   updateLightbox();
   lightbox.classList.add("is-open");
 }
