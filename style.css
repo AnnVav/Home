@@ -326,8 +326,10 @@ html {
   max-height: 80vh;
   object-fit: contain;
   box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-}
 
+  opacity: 1;
+  transition: opacity 0.45s ease;
+}
 /* TEXT */
 .lightbox-info {
   margin-top: 18px;
