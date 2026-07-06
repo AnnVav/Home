@@ -256,6 +256,11 @@ html {
   object-fit: contain;
 }
 
+.artwork-info {
+  margin-top: 18px;
+  text-align: center;
+}
+
 /* =========================
    TYPOGRAPHY GALLERY
 ========================= */
