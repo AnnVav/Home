@@ -301,84 +301,81 @@ html {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(64, 59, 55, 0.96); /* #403B37 */
+  background: #e6e0d8; /* plus clair que ton brun global */
   display: flex;
   align-items: center;
   justify-content: center;
-
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
-
-  z-index: 999999;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
 }
 
 .lightbox.is-open {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 .lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 90vw;
-  max-height: 90vh;
 }
 
 .lightbox-image {
-  max-width: 100%;
-  max-height: 75vh;
+  max-width: 90vw;
+  max-height: 80vh;
   object-fit: contain;
-  margin-bottom: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
 }
 
-/* TEXTES */
+/* TEXT */
 .lightbox-info {
+  margin-top: 18px;
   text-align: center;
-  color: #F1EEE8;
-  font-family: "Cormorant Garamond", serif;
+  color: #4a433d;
 }
 
-.lb-title {
-  font-size: 1.3rem;
-  font-style: italic;
-  margin-bottom: 8px;
-}
-
-.lb-series {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  opacity: 0.8;
-  margin-bottom: 8px;
-}
-
-.lb-meta {
-  font-size: 0.85rem;
-  opacity: 0.75;
-}
-
-.lb-status {
-  font-size: 0.7rem;
-  margin-top: 10px;
-  opacity: 0.6;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-/* CLOSE BUTTON */
+/* CLOSE */
 .lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-
+  position: fixed;
+  top: 25px;
+  right: 30px;
+  font-size: 28px;
   background: none;
   border: none;
-  font-size: 2rem;
-  color: #F1EEE8;
-
   cursor: pointer;
+  color: #4a433d;
+}
+
+/* NAV ARROWS */
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.lightbox-btn {
+  pointer-events: all;
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #4a433d;
+  cursor: pointer;
+  padding: 20px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-btn:hover {
+  opacity: 1;
 }
 
 /* =========================
