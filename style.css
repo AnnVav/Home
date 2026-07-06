@@ -114,7 +114,7 @@ html {
 .hero-text {
   position: absolute;
   right: 90px;
-  bottom: 90px;
+  bottom: 130px;
 
   display: flex;
   flex-direction: column;
