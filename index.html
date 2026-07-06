@@ -215,6 +215,18 @@ console.log("JS loaded");
     });
   }
 
+  const hoverTargets = document.querySelectorAll("img, a");
+
+hoverTargets.forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    cursor.classList.add("hover");
+  });
+
+  el.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hover");
+  });
+});
+
   /* =========================
      HERO ANIMATION
   ========================= */
