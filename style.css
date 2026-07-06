@@ -234,16 +234,17 @@ html {
   max-width: 60vw;
   margin: 0 auto;
   padding: 60px 0;
+
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
   text-align: center;
- opacity:0;
-    transform:translateY(18px);
-    transition:
-        opacity 1.2s ease,
-        transform 1.2s ease;
+
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+
+  position: relative;
 }
 
 .artwork.is-visible {
@@ -251,50 +252,15 @@ html {
   transform: translateY(0);
 }
 
+/* =========================
+   IMAGE
+========================= */
+
 .artwork img {
   width: 82%;
   max-height: 74vh;
   object-fit: contain;
-}
 
-.artwork-info {
-  margin-top: 14px;
-  text-align: center;
-
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
-
-  pointer-events: none;
-}
-
-.artwork-info {
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-
-  text-align: center;
-  pointer-events: none;
-
-  padding: 10px 14px;
-  background: rgba(241, 238, 232, 0.6);
-  backdrop-filter: blur(4px);
-  border-radius: 6px; 
-} 
-
-.artwork img{
-
-    cursor:pointer;
-
-    transition:
-        transform .45s ease,
-        opacity .45s ease;
-}
-
-.artwork img {
   cursor: pointer;
   transition: opacity 0.45s ease, filter 0.45s ease;
 }
@@ -302,6 +268,21 @@ html {
 .artwork img:hover {
   opacity: 0.98;
   filter: brightness(1.03);
+}
+
+/* =========================
+   CAPTION (BELOW IMAGE)
+========================= */
+
+.artwork-info {
+  margin-top: 14px;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+
+  pointer-events: none;
 }
 
 .artwork:hover .artwork-info {
