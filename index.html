@@ -143,6 +143,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+window.addEventListener("load", () => {
+
+  const image = document.querySelector(".hero-image");
+  const text = document.querySelector(".hero-text");
+
+  setTimeout(() => {
+    if (image) image.classList.add("is-visible");
+  }, 300);
+
+  setTimeout(() => {
+    if (text) text.classList.add("is-visible");
+  }, 1800);
+
+});
+  
 const statement = document.querySelector(".scroll-statement");
 
 const observer2 = new IntersectionObserver((entries) => {
