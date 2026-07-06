@@ -45,7 +45,13 @@
 
 </div>
 </section>
-
+  
+  <section>
+<div class="scroll-statement">
+  The visible is only the beginning.
+</div>
+  </section>
+  
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
 
@@ -137,6 +143,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+const statement = document.querySelector(".scroll-statement");
+
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+if (statement) observer2.observe(statement);
+  
   /* FADE + STAGGER */
   const artworks = document.querySelectorAll(".artwork");
 
