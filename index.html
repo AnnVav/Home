@@ -29,28 +29,25 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <img class="hero-image" src="annick-vavasseur-le-present-2022-cover.jpg" alt="">
-  <div class="hero-text">
 
   <div class="hero-text">
 
-  <div class="artist-name">
-    <span>ANNICK</span>
-    <span>VAVASSEUR</span>
-  </div>
+    <div class="artist-name">
+      <span>ANNICK</span>
+      <span>VAVASSEUR</span>
+    </div>
 
-  <div class="hero-title">
-    Inner<br>
-    Landscapes
-  </div>
+    <div class="hero-title">
+      Inner<br>
+      Landscapes
+    </div>
 
-</div>
+  </div>
 </section>
   
-  <section>
-<div class="scroll-statement">
+  <div class="scroll-statement">
   The visible is only the beginning.
 </div>
-  </section>
   
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
@@ -148,13 +145,11 @@ window.addEventListener("load", () => {
   const image = document.querySelector(".hero-image");
   const text = document.querySelector(".hero-text");
 
-  setTimeout(() => {
-    if (image) image.classList.add("is-visible");
-  }, 300);
+  if (image) image.classList.add("is-visible");
 
   setTimeout(() => {
     if (text) text.classList.add("is-visible");
-  }, 1800);
+  }, 1200);
 
 });
   
