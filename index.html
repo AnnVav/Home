@@ -198,6 +198,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 console.log("JS loaded");
 
+  let lastScrollY = 0;
+
   /* =========================
      CURSOR
   ========================= */
@@ -270,11 +272,11 @@ console.log("JS loaded");
     observer.observe(art);
   });
 
-  /* =========================
-     LIGHTBOX 
-  ========================= */
+/* =========================
+   LIGHTBOX (CLEAN VERSION)
+========================= */
 
- const images = Array.from(document.querySelectorAll("img[data-title]"));
+const images = Array.from(document.querySelectorAll("img[data-title]"));
 
 const lightbox = document.getElementById("lightbox");
 const lbImage = document.querySelector(".lightbox-image");
@@ -288,40 +290,51 @@ const prevBtn = document.querySelector(".prev");
 const closeBtn = document.querySelector(".lightbox-close");
 
 let currentIndex = 0;
+let lastScrollY = 0;
+
+/* PRELOAD ALL IMAGES (smooth navigation) */
+images.forEach(img => {
+  const preload = new Image();
+  preload.src = img.src;
+});
+
+/* PRELOAD ADJACENT IMAGES */
+function preloadAdjacent(index) {
+  const next = (index + 1) % images.length;
+  const prev = (index - 1 + images.length) % images.length;
+
+  [next, prev].forEach(i => {
+    const img = new Image();
+    img.src = images[i].src;
+  });
+}
 
 /* OPEN */
 function openLightbox(index) {
   currentIndex = index;
+  lastScrollY = window.scrollY;
 
   const img = images[currentIndex];
 
-  // preload image before showing
-  const preload = new Image();
-  preload.src = img.src;
+  preloadAdjacent(index);
 
-  // start hidden state
+  // soft opening state
   lightbox.classList.add("is-opening");
 
   setTimeout(() => {
     lightbox.classList.add("is-open");
     lightbox.classList.remove("is-opening");
-
     updateLightbox();
   }, 120);
 }
-  updateLightbox();
-  lightbox.classList.add("is-open");
-}
 
+/* UPDATE */
 function updateLightbox() {
   const img = images[currentIndex];
 
-  // fade out
-   lbImage.style.opacity = 0;
-   lbImage.style.transform = "scale(.985)";
-   lbImage.style.opacity = 1;
-   lbImage.style.transform = "scale(1)";
-  
+  lbImage.style.opacity = 0;
+  lbImage.style.transform = "scale(0.985)";
+
   setTimeout(() => {
     lbImage.src = img.src;
 
@@ -330,28 +343,38 @@ function updateLightbox() {
     lbMeta.textContent = img.dataset.meta || "";
     lbStatus.textContent = img.dataset.status || "";
 
-    // fade in
     requestAnimationFrame(() => {
       lbImage.style.opacity = 1;
+      lbImage.style.transform = "scale(1)";
     });
 
-  }, 200);
+  }, 150);
 }
+
 /* NAVIGATION */
 function nextImage() {
   currentIndex = (currentIndex + 1) % images.length;
   updateLightbox();
+  preloadAdjacent(currentIndex);
 }
 
 function prevImage() {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   updateLightbox();
+  preloadAdjacent(currentIndex);
 }
 
-/* CLOSE */
+/* CLOSE (scroll memory restored) */
 function closeLightbox() {
   lightbox.classList.remove("is-open");
-  lbImage.src = "";
+
+  setTimeout(() => {
+    lbImage.src = "";
+    window.scrollTo({
+      top: lastScrollY,
+      behavior: "smooth"
+    });
+  }, 250);
 }
 
 /* EVENTS */
@@ -364,20 +387,17 @@ prevBtn?.addEventListener("click", prevImage);
 
 closeBtn?.addEventListener("click", closeLightbox);
 
-/* click outside */
-lightbox?.addEventListener("click", (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
-
-/* ESC */
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeLightbox();
   if (e.key === "ArrowRight") nextImage();
   if (e.key === "ArrowLeft") prevImage();
 });
 
+lightbox?.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
 });
   
+});  
 </script>
 
   
