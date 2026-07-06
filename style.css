@@ -143,6 +143,10 @@ html {
   margin-right: 62px;
 }
 
+.artist-name span {
+  display: block;
+}
+
 .hero-title {
   margin-top: 14px;
 
