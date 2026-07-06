@@ -364,6 +364,10 @@ html {
   z-index: 9999;
 }
 
+.lightbox.is-opening {
+  opacity: 0;
+}
+
 .lightbox.is-open {
   opacity: 1;
   pointer-events: all;
