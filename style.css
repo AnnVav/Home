@@ -235,6 +235,7 @@ html {
   margin: 0 auto;
   padding: 60px 0;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -261,9 +262,22 @@ html {
 }
 
 .artwork-info {
-  margin-top: 18px;
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
   text-align: center;
-}
+  pointer-events: none;
+
+  padding: 10px 14px;
+  background: rgba(241, 238, 232, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 6px; 
+} 
 
 .artwork img{
 
@@ -279,6 +293,11 @@ html {
     transform:scale(1.01);
 
     opacity:.97;
+}
+
+.artwork:hover .artwork-info {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* =========================
@@ -578,6 +597,15 @@ html {
     padding: 40px 0;
   }
 
+ .artwork-info {
+    position: static;
+    transform: none;
+    opacity: 1;
+    margin-top: 14px;
+    background: none;
+    backdrop-filter: none;
+  }
+   
   .page {
     padding: 110px 20px 70px;
   }
