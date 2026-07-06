@@ -271,6 +271,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================= */
 
   const lightbox = document.getElementById("lightbox");
+  if (!lightbox) {
+  console.warn("Lightbox not found in DOM");
+}
   const lbImage = document.querySelector(".lightbox-image");
   const lbTitle = document.querySelector(".lb-title");
   const lbSeries = document.querySelector(".lb-series");
