@@ -269,55 +269,46 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =========================
-     LIGHTBOX (FIX IMPORTANT)
+     LIGHTBOX 
   ========================= */
 
-  const lightbox = document.getElementById("lightbox");
-  if (!lightbox) {
-  console.warn("Lightbox not found in DOM");
+  const images = Array.from(document.querySelectorAll("img[data-title]"));
+
+let currentIndex = 0;
+
+function openLightbox(img) {
+  currentIndex = images.indexOf(img);
+
+  lightbox.classList.add("is-open");
+
+  updateLightbox();
 }
-  const lbImage = document.querySelector(".lightbox-image");
-  const lbTitle = document.querySelector(".lb-title");
-  const lbSeries = document.querySelector(".lb-series");
-  const lbMeta = document.querySelector(".lb-meta");
-  const lbStatus = document.querySelector(".lb-status");
-  const closeBtn = document.querySelector(".lightbox-close");
 
-  function openLightbox(img) {
-    if (!lightbox || !img) return;
+function updateLightbox() {
+  const img = images[currentIndex];
 
-    lightbox.classList.add("is-open");
+  lbImage.src = img.src;
+  lbTitle.textContent = img.dataset.title || "";
+  lbSeries.textContent = img.dataset.series || "";
+  lbMeta.textContent = img.dataset.meta || "";
+  lbStatus.textContent = img.dataset.status || "";
+}
 
-    lbImage.src = img.src;
-    lbTitle.textContent = img.dataset.title || "";
-    lbSeries.textContent = img.dataset.series || "";
-    lbMeta.textContent = img.dataset.meta || "";
-    lbStatus.textContent = img.dataset.status || "";
-  }
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateLightbox();
+}
 
-  function closeLightbox() {
-    if (!lightbox) return;
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateLightbox();
+}
 
-    lightbox.classList.remove("is-open");
-    lbImage.src = "";
-  }
+document.querySelector(".next")?.addEventListener("click", nextImage);
+document.querySelector(".prev")?.addEventListener("click", prevImage);
 
-  document.querySelectorAll("img[data-title]").forEach(img => {
-    img.addEventListener("click", () => openLightbox(img));
-  });
-
-  if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
-
-  if (lightbox) {
-    lightbox.addEventListener("click", (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-  }
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeLightbox();
-  });
-
+images.forEach(img => {
+  img.addEventListener("click", () => openLightbox(img));
 });
 </script>
 
