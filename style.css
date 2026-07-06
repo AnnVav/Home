@@ -135,17 +135,23 @@ html {
   line-height: 1;
 }
 
+.artist-name span:first-child {
+  margin-right: 48px;
+}
+
 .hero-title {
   margin-top: 10px;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.25rem;
+  font-size: 1.7rem;
+  font-style: italic;
 
-  line-height: 1.05;
+  line-height: 0.95;
   text-align: right;
 
   color: #4A433D;
 }
+
 .hero::after {
   content: "";
   position: absolute;
