@@ -262,6 +262,7 @@ html {
   transform: translateY(0);
 }
 
+
 /* =========================
    GALLERY
 ========================= */
@@ -540,6 +541,28 @@ html {
 
 @media (max-width: 768px) {
 
+.hero {
+  height: 82vh;
+}
+
+.hero-text {
+  bottom: 35px;
+}
+
+  .artist-name {
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+}
+   
+.scroll-statement {
+  padding: 80px 25px 50px;
+}
+   
   .lightbox-image {
     max-height: 60vh;
   }
