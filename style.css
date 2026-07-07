@@ -176,6 +176,18 @@ html {
   transform: translateY(40px);
 }
 
+(a voir si lecture meilleure)
+.hero-text{
+    padding:20px 24px;
+
+    background:
+    linear-gradient(
+        to left,
+        rgba(241,238,232,.42),
+        rgba(241,238,232,0)
+    );
+}
+
 .artist-name {
   display: flex;
   flex-direction: column;
@@ -207,17 +219,6 @@ html {
   text-align: right;
 
   color: #4A433D;
-}
-
-.hero-text{
-    padding:20px 24px;
-
-    background:
-    linear-gradient(
-        to left,
-        rgba(241,238,232,.42),
-        rgba(241,238,232,0)
-    );
 }
 
 .hero::after {
@@ -444,15 +445,23 @@ html {
 
 /* CLOSE */
 .lightbox-close {
-  position: fixed;
-  top: 20px;
-  right: 25px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #4a433d;
-  z-index: 10;
+    position: absolute;
+   
+    top: 28px;
+    right: 28px;
+    width:42px;
+    height:42px;
+
+    border:none;
+    background:none;
+
+    color:#e7e0d8;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    z-index:10002;
 }
 
 /* NAV ARROWS */
