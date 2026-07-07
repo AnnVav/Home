@@ -112,7 +112,7 @@ html {
   align-items: center;
   justify-content: center;
 
-  gap: 32px;
+  gap: 40px;
 
   background: rgba(241, 238, 232, 0.6);
   backdrop-filter: blur(6px);
@@ -123,8 +123,8 @@ html {
 }
 
 .main-nav a {
-  font-size: 0.68rem;
-  letter-spacing: 1.9px;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text);
@@ -511,7 +511,28 @@ html {
     letter-spacing: 1.4px;
   }
 
+ .artist-name {
+    font-size: 1.8rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+   
 }
+
+@media (max-width: 900px) {
+
+  .main-nav {
+    gap: 18px;
+  }
+
+  .main-nav a {
+    font-size: 0.68rem;
+  }
+
+}
+
 
 /* =========================
    MOBILE
