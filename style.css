@@ -488,24 +488,6 @@ html {
   opacity: 1;
 }
 
-@media (max-width: 1400px) {
-
-  .hero-text {
-    right: 80px;
-    bottom: 110px;
-  }
-
-}
-
-@media (max-width: 1100px) {
-
-  .hero-text {
-    right: 70px;
-    bottom: 140px;
-  }
-
-}
-
 /* =========================
    MOBILE
 ========================= */
