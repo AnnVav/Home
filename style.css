@@ -176,18 +176,6 @@ html {
   transform: translateY(40px);
 }
 
-(a voir si lecture meilleure)
-.hero-text{
-    padding:20px 24px;
-
-    background:
-    linear-gradient(
-        to left,
-        rgba(241,238,232,.42),
-        rgba(241,238,232,0)
-    );
-}
-
 .artist-name {
   display: flex;
   flex-direction: column;
@@ -498,6 +486,24 @@ html {
 
 .lightbox-btn:hover {
   opacity: 1;
+}
+
+@media (max-width: 1400px) {
+
+  .hero-text {
+    right: 80px;
+    bottom: 110px;
+  }
+
+}
+
+@media (max-width: 1100px) {
+
+  .hero-text {
+    right: 70px;
+    bottom: 140px;
+  }
+
 }
 
 /* =========================
