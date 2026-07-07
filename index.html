@@ -288,7 +288,7 @@ hoverTargets.forEach(el => {
    LIGHTBOX (CLEAN VERSION)
 ========================= */
 
-const images = Array.from(document.querySelectorAll("img[data-title]"));
+const images = Array.from(document.querySelectorAll(".gallery .artwork img"));
 
 const lightbox = document.getElementById("lightbox");
 const lbImage = document.querySelector(".lightbox-image");
@@ -302,7 +302,6 @@ const prevBtn = document.querySelector(".prev");
 const closeBtn = document.querySelector(".lightbox-close");
 
 let currentIndex = 0;
-let lastScrollY = 0;
 
 /* PRELOAD ALL IMAGES (smooth navigation) */
 images.forEach(img => {
