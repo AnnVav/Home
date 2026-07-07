@@ -209,6 +209,17 @@ html {
   color: #4A433D;
 }
 
+.hero-text{
+    padding:20px 24px;
+
+    background:
+    linear-gradient(
+        to left,
+        rgba(241,238,232,.42),
+        rgba(241,238,232,0)
+    );
+}
+
 .hero::after {
   content: "";
   position: absolute;
