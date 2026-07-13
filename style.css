@@ -440,7 +440,6 @@ html {
 .lb-status {
   color: #e7e0d8;
 }
-}
 
 /* CLOSE */
 .lightbox-close {
@@ -720,12 +719,11 @@ html {
 copyright {
 
   margin-top: 50px;
-  margin-bottom: 20px;
-
+  text-align: center;
   font-size: 0.75rem;
   color: var(--text-soft);
   line-height: 1.7;
-
+  margin-bottom: 20px;
 }
 
 /* =========================
