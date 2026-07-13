@@ -685,7 +685,7 @@ html {
   width: 100%;
   max-width: 800px;
 
-  margin: 30px auto 0;
+  margin: 10px auto 0;
   padding: 0 30px;
 
   text-align: center;
@@ -696,16 +696,16 @@ html {
 
 .collector-note p {
 
-  font-size: 0.90rem;
+  font-size: 0.96rem;
   font-weight: 300;
 
-  line-height: 1.9;
+  line-height: 1.7;
   letter-spacing: 0.02em;
 
 }
 
 .collector-note {
-  margin-bottom: 55px;
+  margin-bottom: 40px;
 }
 
 /* =========================
@@ -720,6 +720,7 @@ html {
 copyright {
 
   margin-top: 50px;
+  margin-bottom: 20px;
 
   font-size: 0.75rem;
   color: var(--text-soft);
