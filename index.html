@@ -221,32 +221,40 @@ console.log("JS loaded");
 
   let lastScrollY = 0;
 
-  /* =========================
-     CURSOR
-  ========================= */
+/* =========================
+   CURSOR
+========================= */
 
-  document.body.classList.add("js-enabled");
+document.body.classList.add("js-enabled");
 
-  const cursor = document.querySelector(".cursor");
+const cursor = document.querySelector(".cursor");
 
-  if (cursor) {
-    document.addEventListener("mousemove", (e) => {
-      cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
+if (cursor) {
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+
+  const hoverTargets = document.querySelectorAll("img, a, button");
+
+  hoverTargets.forEach(el => {
+
+    el.addEventListener("mouseenter", () => {
+
+      if (!document.body.classList.contains("lightbox-active")) {
+        cursor.classList.add("hover");
+      }
+
     });
-  }
 
-  const hoverTargets = document.querySelectorAll("img, a");
+    el.addEventListener("mouseleave", () => {
+      cursor.classList.remove("hover");
+    });
 
-hoverTargets.forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    cursor.classList.add("hover");
   });
 
-  el.addEventListener("mouseleave", () => {
-    cursor.classList.remove("hover");
-  });
-});
+}
 
   /* =========================
      HERO ANIMATION
