@@ -385,6 +385,26 @@ html {
 }
 
 /* =========================
+   CURSOR - LIGHTBOX MODE
+========================= */
+
+body.lightbox-active .cursor {
+  border-color: rgba(241, 238, 232, 0.75);
+}
+
+body.lightbox-active .cursor::after {
+  background: rgba(241, 238, 232, 0.85);
+}
+
+body.lightbox-active .cursor.hover {
+  border-color: rgba(241, 238, 232, 0.95);
+}
+
+body.lightbox-active .cursor.hover::after {
+  background: rgba(241, 238, 232, 1);
+}
+
+/* =========================
    LIGHTBOX
 ========================= */
 
@@ -474,7 +494,7 @@ transform .45s ease;
     font-size:30px;
     opacity: 0.75;
    
-    cursor:pointer;
+    cursor:none;
 
     z-index:10002;
 }
@@ -502,7 +522,7 @@ transform .45s ease;
   background: none;
   border: none;
   color: #e7e0d8;
-  cursor: pointer;
+  cursor: none;
   opacity: 0.6;
   z-index: 10001;
 }
