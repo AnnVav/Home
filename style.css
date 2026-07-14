@@ -391,8 +391,12 @@ html {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(55, 50, 46, 0.96);
-  backdrop-filter: blur(3px);
+background:
+  radial-gradient(
+    circle at center,
+    rgba(96, 90, 83, 0.98) 0%,
+    rgba(55, 50, 46, 1) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -428,7 +432,7 @@ object-fit:contain;
 
 border-radius:2px;
 
-box-shadow:0 10px 40px rgba(0,0,0,.15);
+box-shadow:0 20px 60px rgba(0,0,0,0.22);
 
 transition:
 opacity .45s ease,
@@ -443,11 +447,14 @@ transform .45s ease;
   color: #e7e0d8;
  }
 
-.lb-title,
+.lb-title {
+  color: #f0ebe4;
+}
+
 .lb-series,
 .lb-meta,
 .lb-status {
-  color: #e7e0d8;
+  color: rgba(231,224,216,0.75);
 }
 
 /* CLOSE */
@@ -464,11 +471,16 @@ transform .45s ease;
 
     color:#e7e0d8;
 
-    font-size:34px;
-
+    font-size:30px;
+    opacity: 0.75;
+   
     cursor:pointer;
 
     z-index:10002;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
 }
 
 /* NAV ARROWS */
