@@ -390,31 +390,36 @@ html {
 
 .lightbox {
   position: fixed;
-  inset: 0;
-background:
-  radial-gradient(
-    circle at center,
-    rgba(96, 90, 83, 0.98) 0%,
-    rgba(55, 50, 46, 1) 100%
-  );
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(96, 90, 83, 0.98) 0%,
+      rgba(55, 50, 46, 1) 100%
+    );
+
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-  z-index: 9999;
-}
 
-.lightbox.is-opening {
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.5s ease;
+
+  z-index: 9999;
 }
 
 .lightbox.is-open {
   opacity: 1;
-  pointer-events: all;
+  visibility: visible;
+  pointer-events: auto;
 }
-
 .lightbox-content {
   position: relative;
   max-width: 90vw;
