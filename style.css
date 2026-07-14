@@ -397,7 +397,7 @@ body.lightbox-active .cursor::after {
 }
 
 body.lightbox-active .cursor.hover {
-  border-color: rgba(241, 238, 232, 0.95);
+  border-color: rgba(241, 238, 232, 1);
 }
 
 body.lightbox-active .cursor.hover::after {
