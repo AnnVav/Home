@@ -104,8 +104,6 @@ html {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-   
-  display: flex;
 
   display: flex;
   flex-wrap: nowrap;
@@ -197,13 +195,9 @@ html {
 
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  line-height: 0.95;
+  line-height: 1.05;
 
   text-align: right;
-}
-
-.artist-name {
-  line-height: 1.05;
 }
 
 .hero-title {
@@ -278,6 +272,7 @@ html {
 .artwork {
   width: 100%;
   max-width: 60vw;
+  max-width:min(900px,65vw); 
   margin: 0 auto;
   padding: 60px 0;
 
@@ -411,22 +406,20 @@ html {
 
 .lightbox-image{
 
-    border-radius:2px;
+max-width:90vw;
+max-height:80vh;
+object-fit:contain;
 
-    transition:
-        opacity .45s ease,
-        transform .45s ease;
+border-radius:2px;
+
+box-shadow:0 10px 40px rgba(0,0,0,.15);
+
+transition:
+opacity .45s ease,
+transform .45s ease;
+
 }
 
-.lightbox-image {
-  max-width: 90vw;
-  max-height: 80vh;
-  object-fit: contain;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-
-  opacity: 1;
-  transition: opacity 0.45s ease;
-}
 /* TEXT */
 .lightbox-info {
   margin-top: 18px;
@@ -624,7 +617,7 @@ html {
 }
 
 .text-column p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 300;
   line-height: 1.9;
   text-align: justify;
@@ -714,7 +707,7 @@ html {
   padding: 120px 30px 40px;
 }
 
-copyright {
+.copyright {
 
   margin-top: 50px;
   text-align: center;
