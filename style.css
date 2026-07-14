@@ -213,6 +213,17 @@ html {
   color: #4A433D;
 }
 
+.hero-subtitle {
+  margin-top: 1.2rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: rgba(255,255,255,0.82); /* ou adapte selon ton fond */
+  line-height: 1.4;
+}
+
 .hero::after {
   content: "";
   position: absolute;
