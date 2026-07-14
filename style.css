@@ -752,23 +752,34 @@ transform .45s ease;
   margin-bottom: 40px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ========================= FOOTER ========================= */ 
+.site-footer { 
+   text-align: center;
+   padding: 120px 30px 90px;
+} 
 
-.site-footer {
-  text-align: center;
-  padding: 120px 30px 70px;
+.footer-text {
+   margin-bottom: 35px;
 }
 
-.copyright {
+.collector-note {
+   padding: 0 24px;
+   margin: 25px auto 0;
+   max-width: 650px;
+} 
 
-  margin-top: 35px; 
-  padding-bottom: 25px; 
-  text-align: center; 
-  font-size: 0.75rem;
-  color: var(--text-soft); 
-  line-height: 1.5;
+.collector-note p { 
+   font-size: 0.78rem;
+   line-height: 1.55;
+   color: var(--text-soft);
+} 
+
+.copyright {
+   margin-top: 40px;
+   padding-bottom: 10px;
+   font-size: 0.75rem;
+   color: var(--text-soft);
+   line-height: 1.5;
 }
 
 /* =========================
