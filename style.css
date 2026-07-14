@@ -404,6 +404,10 @@ body.lightbox-active .cursor.hover::after {
   background: rgba(241, 238, 232, 1);
 }
 
+body.lightbox-active .cursor.hover::after {
+  opacity: 0;
+}
+
 /* =========================
    LIGHTBOX
 ========================= */
