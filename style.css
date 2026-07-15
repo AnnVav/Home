@@ -31,7 +31,7 @@ body {
    CURSOR
 ========================= */
 
-body.js-enabled {
+body {
   cursor: none;
 }
 
@@ -83,6 +83,13 @@ html {
   width: 34px;
   height: 34px;
   border-color: rgba(74, 67, 61, 0.25);
+}
+
+a:hover ~ .cursor,
+a:hover .cursor,
+button:hover .cursor,
+img:hover .cursor {
+  opacity: 1;
 }
 
 .cursor.hover::after {
@@ -672,13 +679,14 @@ transform .55s cubic-bezier(.22,.61,.36,1);
   text-align: center;
   letter-spacing: 0.05em;
   color: #3f3f3f;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
-/* IMPORTANT : spacing titre → texte */
-.page-title + .text-column,
-.page-title + .statement-column {
-  margin-top: var(--space-sm);
+.text-column,
+.statement-column {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 /* =========================
