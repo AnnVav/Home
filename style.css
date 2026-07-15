@@ -790,6 +790,12 @@ transform .55s cubic-bezier(.22,.61,.36,1);
   margin-bottom: var(--space-sm);
 }
 
+.exhibitions-column .block {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
 /* =========================
    COLLECTOR NOTE
 ========================= */
