@@ -31,7 +31,7 @@ body {
    CURSOR
 ========================= */
 
-body {
+body.js-enabled {
   cursor: none;
 }
 
