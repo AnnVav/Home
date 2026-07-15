@@ -112,9 +112,15 @@ html {
 
   gap: 40px;
 
-  background: rgba(241, 238, 232, 0.6);
-  backdrop-filter: blur(6px);
+  background: rgba(241,238,232,.48);
+  border:1px solid rgba(255,255,255,.25);
 
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  box-shadow:
+  0 8px 30px rgba(0,0,0,.05);
+  
   padding: 8px 18px;
   border-radius: 20px;
   white-space: nowrap;
@@ -162,17 +168,6 @@ html {
 }
 
 .hero-text {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.8s ease, transform 1.8s ease;
-}
-
-.hero-text.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero-text {
   position: absolute;
   right: 50px;
   bottom: 80px;
@@ -181,7 +176,14 @@ html {
   flex-direction: column;
   align-items: flex-end;
 
+  opacity: 0;
   transform: translateY(40px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+.hero-text.is-visible{
+    opacity:1;
+    transform:translateY(0);
 }
 
 .artist-name {
@@ -283,8 +285,7 @@ html {
 
 .artwork {
   width: 100%;
-  max-width: 60vw;
-  max-width:min(900px,65vw); 
+  max-width:min(900px,60vw); 
   margin: 0 auto;
   padding: 60px 0;
 
@@ -462,8 +463,8 @@ border-radius:2px;
 box-shadow:0 20px 60px rgba(0,0,0,0.22);
 
 transition:
-opacity .45s ease,
-transform .45s ease;
+opacity .35s ease,
+transform .55s cubic-bezier(.22,.61,.36,1);
 
 }
 
@@ -627,6 +628,29 @@ transform .45s ease;
   }
 }
 
+@media (hover:none){
+
+    .cursor{
+        display:none;
+    }
+
+    body{
+        cursor:auto;
+    }
+
+}
+
+@media (hover:hover){
+
+    .artwork-info{
+        opacity:0;
+    }
+
+    .artwork:hover .artwork-info{
+        opacity:1;
+    }
+
+}
 
 /* =========================
    PAGE LAYOUT (BIO / STATEMENT)
