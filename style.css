@@ -294,7 +294,7 @@ img:hover .cursor {
   width: 100%;
   max-width:min(900px,60vw); 
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 70px 0;
 
   display: flex;
   flex-direction: column;
