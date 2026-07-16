@@ -622,7 +622,7 @@ button:focus-visible {
   text-align: center;
   letter-spacing: 0.05em;
   color: #3f3f3f;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 70px;
 }
 
 /* =========================
