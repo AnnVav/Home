@@ -735,6 +735,10 @@ button:focus-visible {
   line-height: 1.7;
 }
 
+.exhibitions-subtitle {
+  margin-top: var(--space-md);
+}
+
 /* =========================
    COLLECTOR NOTE
 ========================= */
