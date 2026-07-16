@@ -863,7 +863,7 @@ button:focus-visible {
 
   .page-title {
     font-size: 1.6rem;
-    margin-bottom: var(--space-sm);
+    margin-bottom: 45px;
   }
 
   .text-column p,
