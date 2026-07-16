@@ -10,8 +10,8 @@
 
   /* spacing system (léger mais propre) */
   --space-sm: 48px;
-  --space-md: 70px;
-  --space-lg: 100px;
+  --space-md: 75px;
+  --space-lg: 110px;
 }
 
 * {
