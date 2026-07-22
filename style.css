@@ -7,8 +7,9 @@
   --text: #504841;
   --text-soft: #7A726A;
   --line: #D8D2CA;
-
-  /* spacing system (léger mais propre) */
+  --accent:    #CDAA4D;
+  
+   /* spacing system (léger mais propre) */
   --space-sm: 48px;
   --space-md: 75px;
   --space-lg: 110px;
