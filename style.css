@@ -175,6 +175,10 @@ img:hover .cursor {
   transform: scale(1);
 }
 
+.hero-image {
+  cursor: pointer;
+}
+
 .hero-text {
   position: absolute;
   right: 50px;
