@@ -196,15 +196,6 @@
 </div> 
   </section>
   
-<img 
-  class="lightbox-only-image"
-  src="images/annick-vavasseur-le-present-2021.jpg"
-  data-title="Le Présent (2021)"
-  data-series="Series — Worlds within worlds"
-  data-meta="Acrylic on canvas · 73 × 60 cm"
-  data-status="Artist's Private Collection"
-  style="display:none;"
->
     
 <div class="lightbox" id="lightbox">
 
@@ -339,10 +330,9 @@ presentImage.dataset.title = "Le Présent (2021)";
 presentImage.dataset.series = "Series — Worlds within worlds";
 presentImage.dataset.meta = "Acrylic on canvas · 73 × 60 cm";
 presentImage.dataset.status = "Artist's Private Collection";
-  const images = [
-  ...galleryImages.slice(0, -1),
-  presentImage,
-  galleryImages[galleryImages.length - 1]
+ const images = [
+  ...galleryImages,
+  presentImage
 ];
 
 const lightbox = document.getElementById("lightbox");
