@@ -173,28 +173,7 @@
       <div class="meta">Acrylic on canvas · 81 × 65 cm</div>
       <div class="status">Private collection</div>
     </div>
-
-<div class="artwork">
-
-  <img 
-    loading="lazy"
-    src="images/annick-vavasseur-le-present-2021.jpg"
-    data-title="Le Présent (2021)"
-    data-series="Series — Worlds within worlds"
-    data-meta="Acrylic on canvas · 73 x 60 cm"
-    data-status="Artist's Private Collection"
-    alt="Le Présent (2021), contemporary abstract landscape painting, acrylic on canvas, by Annick Vavasseur">
-
-  <div class="artwork-info">
-    <div class="title">Le Présent (2021)</div>
-    <div class="series">Series — Worlds within worlds</div>
-    <div class="meta">Acrylic on canvas · 73 x 60 cm</div>
-    <div class="status">Artist's Private Collection</div>
-  </div>
-
-</div>
     
-  </div>
 
   
 <!-- FOOTER -->
@@ -217,7 +196,16 @@
 </div> 
   </section>
   
-
+<img 
+  class="lightbox-only-image"
+  src="images/annick-vavasseur-le-present-2021.jpg"
+  data-title="Le Présent (2021)"
+  data-series="Series — Worlds within worlds"
+  data-meta="Acrylic on canvas · 73 × 60 cm"
+  data-status="Artist's Private Collection"
+  style="display:none;"
+>
+    
 <div class="lightbox" id="lightbox">
 
   <button class="lightbox-close">×</button>
@@ -342,7 +330,15 @@ if (cursor) {
    LIGHTBOX (CLEAN VERSION)
 ========================= */
 
-const images = Array.from(document.querySelectorAll(".gallery .artwork img"));
+const galleryImages = Array.from(document.querySelectorAll(".gallery .artwork img"));
+
+const presentImage = document.querySelector(".lightbox-only-image");
+
+const images = [
+  ...galleryImages.slice(0, -1),
+  presentImage,
+  ...galleryImages.slice(-1)
+];
 
 const lightbox = document.getElementById("lightbox");
 const lbImage = document.querySelector(".lightbox-image");
