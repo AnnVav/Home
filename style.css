@@ -261,7 +261,7 @@ img:hover .cursor {
 }
 
 .scroll-statement {
-  padding: 120px 30px 40px;
+  padding: 95px 30px 40px;
   text-align: center;
 
   font-family: "Cormorant Garamond", serif;
@@ -794,10 +794,16 @@ button:focus-visible {
    MOBILE (OPTIMISÉ)
 ========================= */
 
+@media (max-width: 600px) and (orientation: portrait) {
+  .hero {
+    height: 88vh;
+  }
+}
+
 @media (max-width: 768px) {
  
 .hero {
-  height: 82vh;
+  height: 81vh;
 }
 
 .hero-text {
