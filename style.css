@@ -870,6 +870,10 @@ button:focus-visible {
     padding: 110px 20px 70px;
   }
 
+  .page {
+    justify-content:flex-start;
+  }
+
   .page-title {
     font-size: 1.6rem;
     margin-bottom: 45px;
