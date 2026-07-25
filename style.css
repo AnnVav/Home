@@ -273,13 +273,11 @@ img:hover .cursor {
   color: var(--text);
 
   opacity: 0;
-  transform: translateY(18px);
   transition: opacity 1.6s ease, transform 1.6s ease;
 }
 
 .scroll-statement.is-visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 
@@ -313,7 +311,7 @@ img:hover .cursor {
 }
 
 .artwork.first-artwork {
-  transform: translateY(12px);
+  transform: translateY(8px);
   transition: opacity 1s ease, transform 1s ease;
 }
 
