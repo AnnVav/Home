@@ -261,7 +261,7 @@ img:hover .cursor {
 }
 
 .scroll-statement {
-  padding: 120px 30px 36px;
+  padding: 125px 30px 40px;
   text-align: center;
 
   font-family: "Cormorant Garamond", serif;
@@ -289,7 +289,7 @@ img:hover .cursor {
 
 .gallery {
   width: 100%;
-  padding-top: 9vh;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
