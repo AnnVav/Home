@@ -25,7 +25,7 @@
       "name": "Annick Vavasseur",
       "jobTitle": "Contemporary Artist and Painter",
       "nationality": "French",
-      "description": "Annick Vavasseur is a French contemporary painter exploring inner landscapes, color, memory and poetic visual experiences.",
+      "description": "Annick Vavasseur is a contemporary painter based in France exploring inner landscapes, color, memory and poetic visual experiences.",
       "knowsAbout": [
   "Painting",
   "Contemporary Art",
@@ -55,6 +55,11 @@
       "height": "60 cm",
       "description": "Inner landscape painting exploring perception, color and invisible worlds."
     },
+  {
+ "@type": "VisualArtwork",
+ "name": "Le Présent",
+ "image": "https://avavasseur.com/images/annick-vavasseur-le-present-2021.jpg"
+},
     {
       "@type": "VisualArtwork",
       "name": "L’Ailleurs, ici",
@@ -127,7 +132,7 @@
     data-series="Series — Worlds Within Worlds"
     data-meta="Acrylic on canvas · 60 × 73 cm"
     data-status="Artist’s private collection"
-    alt="Le Présent (2021), inner landscape painting in acrylic on canvas by Annick Vavasseur">
+    alt="Le Présent (2021), acrylic painting by Annick Vavasseur from the Worlds Within Worlds series">
     
       
   <div class="hero-text">
@@ -143,7 +148,7 @@
     </div>
     
     <div class="hero-subtitle">
-      Unfolding worlds
+      Unfolding Worlds
     </div>
 
   </div>
@@ -165,7 +170,7 @@
          data-series="Series — Worlds Within Worlds"
          data-meta="Acrylic on canvas · 73 × 60 cm"
          data-status="Private collection"
-         alt="Paysage intérieur I (2016), inner landscape, acrylic on canvas by Annick Vavasseur">
+         alt="Paysage intérieur I (2016), contemporary landscape, acrylic on canvas by Annick Vavasseur">
 
     <div class="artwork-info">
       <div class="title">Paysage intérieur I (2016)</div>
@@ -281,7 +286,7 @@
         while also offering the possibility of expanding into larger visual worlds when brought together. </p> 
 </div> 
     <div class="copyright"> 
-      © 2026 Annick Vavasseur<br>
+      © Annick Vavasseur<br>
       All works and images © Annick Vavasseur 
 </div> 
   </section>
@@ -542,9 +547,13 @@ prevBtn?.addEventListener("click", prevImage);
 closeBtn?.addEventListener("click", closeLightbox);
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeLightbox();
+ if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
+ closeLightbox();
+}
+  if (lightbox.classList.contains("is-open")) {
   if (e.key === "ArrowRight") nextImage();
   if (e.key === "ArrowLeft") prevImage();
+}
 });
 
 lightbox?.addEventListener("click", (e) => {
