@@ -182,7 +182,7 @@ img:hover .cursor {
 .hero-text {
   position: absolute;
   right: 50px;
-  bottom: clamp(35px, 8vh, 80px);
+  bottom: clamp(25px, 7vh, 70px);
 
   display: flex;
   flex-direction: column;
@@ -204,7 +204,7 @@ img:hover .cursor {
   align-items: flex-end;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.45rem, 2.3vw, 2.05rem) ;
+  font-size: clamp(1.25rem, 2.0vw, 2.05rem) ;
   color: #4A433D;
 
   text-transform: uppercase;
@@ -218,7 +218,7 @@ img:hover .cursor {
   margin-top: 15px;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: clamp(1rem, 1.8vw, 1.8rem);
   font-style: italic;
 
   line-height: 0.95;
@@ -230,7 +230,7 @@ img:hover .cursor {
 .hero-subtitle {
   margin-top: 1.2rem;
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.3rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
   font-style: italic;
   font-weight: 300;
   letter-spacing: 0.03em;
