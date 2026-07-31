@@ -182,7 +182,7 @@ img:hover .cursor {
 .hero-text {
   position: absolute;
   right: 50px;
-  bottom: 80px;
+  bottom: clamp(35px, 8vh, 80px);
 
   display: flex;
   flex-direction: column;
