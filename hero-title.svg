@@ -20,10 +20,12 @@
 .title{
     font-size:52px;
     font-style:italic;
+    font-family:"Cormorant Garamond";
 }
 
 .subtitle{
     font-size:38px;
+    font-family:"Cormorant Garamond";
     font-style:italic;
     fill:rgba(80,72,65,.83);
 }
