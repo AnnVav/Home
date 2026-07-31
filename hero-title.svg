@@ -13,7 +13,7 @@
 
 .name{
     font-size:63px;
-    letter-spacing:5px;
+    letter-spacing:4.9px;
     font-weight:400;
     font-family:"Cormorant Garamond", serif;
 }
