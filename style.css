@@ -187,12 +187,12 @@ img:hover .cursor {
 
 .hero-text {
   position: absolute;
-  right: 50px;
+  left: 60px;
   bottom: clamp(35px, 10vh, 100px);
 
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
 
   opacity: 0;
   transform: translateY(40px);
@@ -207,7 +207,7 @@ img:hover .cursor {
 .artist-name {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
 
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.25rem, 2.0vw, 2.05rem) ;
@@ -217,7 +217,7 @@ img:hover .cursor {
   letter-spacing: 0.08em;
   line-height: 1.05;
 
-  text-align: right;
+  text-align: left;
 }
 
 .hero-title {
@@ -228,7 +228,7 @@ img:hover .cursor {
   font-style: italic;
 
   line-height: 0.95;
-  text-align: right;
+  text-align: left;
 
   color: #4A433D;
 }
@@ -242,7 +242,7 @@ img:hover .cursor {
   letter-spacing: 0.03em;
   color: rgba(80,72,65,0.87);
   line-height: 1.4;
-  text-align: right;
+  text-align: left;
   text-shadow:
     0 1px 10px rgba(241,238,232,0.9);
 }
