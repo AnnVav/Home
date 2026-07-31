@@ -570,12 +570,6 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") prevImage();
 }
 });
-
-const overlay = document.querySelector(".hero-overlay");
-
-if (overlay) {
-    overlay.classList.add("is-visible");
-}
   
 lightbox?.addEventListener("click", (e) => {
   if (e.target === lightbox) closeLightbox();
