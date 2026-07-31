@@ -175,6 +175,13 @@ img:hover .cursor {
   transform: scale(1);
 }
 
+.hero-text {
+  background: rgba(241, 238, 232, 0.18);
+  padding: 12px 18px;
+  border-radius: 4px;
+  backdrop-filter: blur(3px);
+}
+
 .hero-image {
   cursor: pointer;
 }
@@ -234,7 +241,7 @@ img:hover .cursor {
   font-style: italic;
   font-weight: 300;
   letter-spacing: 0.03em;
-  color: rgba(80,72,65,0.83);
+  color: rgba(80,72,65,0.93);
   line-height: 1.4;
   text-align: right;
 }
