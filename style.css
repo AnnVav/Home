@@ -814,11 +814,15 @@ button:focus-visible {
   }
 
   .main-nav {
-    gap: 20px;
+    gap: 12px;
     flex-wrap: wrap;
-    padding: 8px 12px;
+    padding: 6px 10px;
   }
 
+.main-nav a {
+  font-size: 0.62rem;
+}
+   
   .artist-name {
     bottom: 20px;
     right: 20px;
