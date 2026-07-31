@@ -243,6 +243,10 @@ img:hover .cursor {
   color: rgba(80,72,65,0.93);
   line-height: 1.4;
   text-align: right;
+  text-shadow:
+    0 1px 10px rgba(241,238,232,0.9);
+}
+   
 }
 
 .hero::after {
