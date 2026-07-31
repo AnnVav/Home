@@ -182,7 +182,7 @@ img:hover .cursor {
 .hero-text {
   position: absolute;
   right: 50px;
-  bottom: clamp(25px, 7vh, 70px);
+  bottom: clamp(35px, 10vh, 100px);
 
   display: flex;
   flex-direction: column;
@@ -265,7 +265,7 @@ img:hover .cursor {
   text-align: center;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.65rem;
+  font-size: clamp(1.15rem, 2vw, 1.65rem);
   font-weight: 300;
   font-style: normal;
   letter-spacing: 0.02em;
