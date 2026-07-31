@@ -6,8 +6,6 @@
 
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap');
-
 .artist{
     font-family:"Cormorant Garamond", serif;
     fill:#4A433D;
