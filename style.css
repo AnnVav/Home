@@ -818,7 +818,12 @@ button:focus-visible {
     flex-wrap: nowrap;
     padding: 6px 10px;
   }
-
+   
+.main-nav {
+  width: fit-content;
+  max-width: 92vw;
+}
+   
 .main-nav a {
   font-size: 0.58rem;
 }
