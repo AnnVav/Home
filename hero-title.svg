@@ -6,26 +6,29 @@
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap');
+     
 .artist{
     font-family:"Cormorant Garamond", serif;
     fill:#4A433D;
 }
 
 .name{
-    font-size:58px;
+    font-size:63px;
     letter-spacing:5px;
     font-weight:400;
+    font-family:"Cormorant Garamond", serif;
 }
 
 .title{
-    font-size:52px;
+    font-size:56px;
     font-style:italic;
-    font-family:"Cormorant Garamond";
+    font-family:"Cormorant Garamond", serif;
 }
 
 .subtitle{
-    font-size:38px;
-    font-family:"Cormorant Garamond";
+    font-size:44px;
+    font-family:"Cormorant Garamond", serif;
     font-style:italic;
     fill:rgba(80,72,65,.83);
 }
