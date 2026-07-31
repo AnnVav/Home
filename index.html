@@ -376,11 +376,16 @@ requestAnimationFrame(() => {
 
     if (image) image.classList.add("is-visible");
 
-    setTimeout(() => {
-      if (text) text.classList.add("is-visible");
-    }, 1200);
+setTimeout(() => {
 
-  });
+  const overlay = document.querySelector(".hero-overlay");
+
+  if (overlay) {
+    overlay.classList.add("is-visible");
+  }
+
+}, 1500);
+  
 
   /* =========================
      SCROLL STATEMENT
