@@ -1,41 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1920 1080"
+     viewBox="0 0 2700 1080"
      preserveAspectRatio="xMidYMid meet">
 
 <style>
+
 .artist{
-    font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond", serif;
     fill:#4A433D;
 }
 
 .name{
-    font-size:54px;
+    font-size:58px;
     letter-spacing:5px;
     font-weight:400;
 }
 
 .title{
-    font-size:48px;
+    font-size:52px;
     font-style:italic;
 }
 
 .subtitle{
-    font-size:35px;
+    font-size:38px;
     font-style:italic;
     fill:rgba(80,72,65,.83);
 }
+
 </style>
+
 
 <g class="artist" text-anchor="end">
 
-    <text class="name" x="2150" y="650">ANNICK</text>
-    <text class="name" x="1750" y="835">VAVASSEUR</text>
+    <text class="name" x="2500" y="720">
+        ANNICK
+    </text>
 
-    <text class="title" x="1750" y="920">Inner</text>
-    <text class="title" x="1750" y="970">Landscapes</text>
+    <text class="name" x="2500" y="785">
+        VAVASSEUR
+    </text>
 
-    <text class="subtitle" x="1750" y="1025">
+
+    <text class="title" x="2500" y="870">
+        Inner
+    </text>
+
+    <text class="title" x="2500" y="920">
+        Landscapes
+    </text>
+
+
+    <text class="subtitle" x="2500" y="980">
         Unfolding Worlds
     </text>
 
