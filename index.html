@@ -141,7 +141,9 @@
     data-meta="Acrylic on canvas · 60 × 73 cm"
     data-status="Private collection"
     alt="Le Présent (2021), acrylic painting by Annick Vavasseur from the Worlds Within Worlds series">
-    
+
+<img class="hero-overlay" src="hero-title.svg" alt="">
+  
       
   <div class="hero-text">
 
@@ -544,7 +546,7 @@ images.forEach((img, index) => {
 });
 
 const heroImage = document.querySelector(".hero-image");
-
+  
 heroImage?.addEventListener("click", () => {
   openLightbox(images.length - 1);
 });
@@ -564,6 +566,12 @@ document.addEventListener("keydown", (e) => {
 }
 });
 
+const overlay = document.querySelector(".hero-overlay");
+
+if (overlay) {
+    overlay.classList.add("is-visible");
+}
+  
 lightbox?.addEventListener("click", (e) => {
   if (e.target === lightbox) closeLightbox();
 });
