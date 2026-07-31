@@ -265,7 +265,7 @@ img:hover .cursor {
   text-align: center;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.65rem;
+  font-size: clamp(1.15rem, 2vw, 1.65rem);
   font-weight: 300;
   font-style: normal;
   letter-spacing: 0.02em;
@@ -848,6 +848,7 @@ button:focus-visible {
 
 .scroll-statement {
   padding: 80px 25px 50px;
+  font-size: clamp(0.95rem, 3.5vw, 1.2rem);
 }
    
   .lightbox-image {
