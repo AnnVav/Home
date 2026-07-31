@@ -1,0 +1,918 @@
+/* =========================
+   BASE
+========================= */
+
+:root {
+  --bg: #F1EEE8;
+  --text: #504841;
+  --text-soft: #7A726A;
+  --line: #D8D2CA;
+  --accent:    #CDAA4D;
+  
+   /* spacing system (léger mais propre) */
+  --space-sm: 48px;
+  --space-md: 75px;
+  --space-lg: 110px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* =========================
+   CURSOR
+========================= */
+
+body.js-enabled {
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+
+  border: 1px solid rgba(74, 67, 61, 0.35);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  z-index: 999999;
+
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+/* INNER DOT */
+.cursor::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+
+  background: rgba(74, 67, 61, 0.35);
+
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.cursor.hover {
+  width: 34px;
+  height: 34px;
+  border-color: rgba(74, 67, 61, 0.25);
+}
+
+a:hover ~ .cursor,
+a:hover .cursor,
+button:hover .cursor,
+img:hover .cursor {
+  opacity: 1;
+}
+
+.cursor.hover::after {
+  opacity: 1;
+  background: rgba(74, 67, 61, 0.55);
+}
+
+.cursor {
+  backdrop-filter: blur(2px);
+}
+
+/* =========================
+   NAV
+========================= */
+
+.main-nav {
+  position: fixed;
+  top: max(20px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 36px;
+
+  background: rgba(241,238,232,.48);
+  border:1px solid rgba(255,255,255,.25);
+
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  box-shadow:
+  0 8px 30px rgba(0,0,0,.05);
+  
+  padding: 8px 18px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.main-nav a {
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text);
+  opacity: 0.85;
+  transition: opacity .35s ease;
+}
+
+.main-nav a:hover {
+  opacity: .6;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 2.2s ease, transform 3s ease;
+}
+
+.hero-image.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-image {
+  cursor: pointer;
+}
+
+.hero-text {
+  position: absolute;
+  right: 50px;
+  bottom: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+.hero-text.is-visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.artist-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.45rem, 2.3vw, 2.05rem) ;
+  color: #4A433D;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.05;
+
+  text-align: right;
+}
+
+.hero-title {
+  margin-top: 15px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-style: italic;
+
+  line-height: 0.95;
+  text-align: right;
+
+  color: #4A433D;
+}
+
+.hero-subtitle {
+  margin-top: 1.2rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: rgba(80,72,65,0.83);
+  line-height: 1.4;
+  text-align: right;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 220px;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(241, 238, 232, 0) 0%,
+    rgba(241, 238, 232, 0.08) 30%,
+    rgba(241, 238, 232, 0.30) 55%,
+    rgba(241, 238, 232, 0.70) 80%,
+    var(--bg) 100%
+  );
+}
+
+.scroll-statement {
+  padding: 125px 30px 40px;
+  text-align: center;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.15rem, 2vw, 1.65rem);
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.02em;
+
+  color: var(--text);
+
+  opacity: 0;
+  transition: opacity 1.6s ease, transform 1.6s ease;
+}
+
+.scroll-statement.is-visible {
+  opacity: 1;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  width: 100%;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artwork {
+  width: 100%;
+  max-width:min(900px,60vw); 
+  margin: 0 auto;
+  padding: 70px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  position: relative;
+}
+
+.artwork.first-artwork {
+  transform: translateY(8px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.artwork.is-visible {
+  opacity: 1;
+}
+
+.artwork.first-artwork.is-visible {
+  transform: translateY(0);
+}
+
+.artwork:last-child {
+  padding-bottom: 45px;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+img{
+    display:block;
+}
+
+.artwork img {
+  width: 82%;
+  max-height: 74vh;
+  object-fit: contain;
+
+  cursor: pointer;
+  transition: opacity 0.45s ease, filter 0.45s ease;
+}
+
+.artwork img:hover {
+  opacity: 0.98;
+  filter: brightness(1.03);
+}
+
+/* =========================
+   CAPTION (BELOW IMAGE)
+========================= */
+
+.artwork-info {
+  margin-top: 14px;
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+
+  pointer-events: none;
+}
+
+.artwork:hover .artwork-info {
+  opacity: 1;
+}
+
+/* =========================
+   TYPOGRAPHY GALLERY (scoped)
+========================= */
+
+.artwork .title {
+  margin-top: 18px;
+  font-size: 0.98rem;
+  font-style: italic;
+  color: var(--text);
+}
+
+.artwork .series {
+  font-size: 0.72rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-top: 6px;
+}
+
+.artwork .meta {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  margin-top: 4px;
+}
+
+.artwork .status {
+  font-size: 0.65rem;
+  margin-top: 10px;
+  opacity: 0.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.artwork {
+  will-change: opacity, transform;
+}
+
+/* =========================
+   CURSOR - LIGHTBOX MODE
+========================= */
+
+body.lightbox-active .cursor {
+  border-color: rgba(241, 238, 232, 0.75);
+}
+
+body.lightbox-active .cursor::after {
+  background: rgba(241, 238, 232, 0.85);
+}
+
+body.lightbox-active .cursor.hover {
+  width: 28px;
+  height: 28px;
+  border-color: rgba(241, 238, 232, 0.75);
+}
+
+body.lightbox-active .cursor.hover::after {
+  background: rgba(241, 238, 232, 1);
+}
+
+body.lightbox-active .cursor.hover::after {
+  opacity: 0;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgb(60, 55, 50);
+   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.5s ease;
+
+  z-index: 9999;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-image{
+
+max-width:90vw;
+max-height:80vh;
+object-fit:contain;
+
+border-radius:2px;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.22);
+
+transition:
+opacity .35s ease,
+transform .55s cubic-bezier(.22,.61,.36,1);
+
+}
+
+/* TEXT */
+.lightbox-info {
+  margin-top: 18px;
+  text-align: center;
+  color: #e7e0d8;
+ }
+
+.lb-title {
+  color: #f0ebe4;
+}
+
+.lb-series,
+.lb-meta,
+.lb-status {
+  color: rgba(231,224,216,0.75);
+}
+
+/* CLOSE */
+.lightbox-close {
+    position: absolute;
+   
+    top: 28px;
+    right: 28px;
+    width:42px;
+    height:42px;
+
+    border:none;
+    background:none;
+
+    color:#e7e0d8;
+
+    font-size:30px;
+    opacity: 0.75;
+   
+    cursor:none;
+
+    z-index:10002;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+/* NAV ARROWS */
+.lightbox-nav {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  padding: 0 20px;
+}
+
+.lightbox-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 60px;
+  background: none;
+  border: none;
+  color: #e7e0d8;
+  cursor: none;
+  opacity: 0.6;
+  z-index: 10001;
+}
+
+.lightbox-btn.prev {
+  left: 20px;
+}
+
+.lightbox-btn.next {
+  right: 20px;
+}
+
+.lightbox-btn:hover {
+  opacity: 1;
+}
+
+/* =========================
+   ACCESSIBILITÉ
+========================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4A433D;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1100px) {
+
+  .main-nav {
+    gap: 20px;
+    padding: 8px 14px;
+  }
+
+  .main-nav a {
+    font-size: 0.62rem;
+    letter-spacing: 1.4px;
+  }
+
+ .artist-name {
+    font-size: 1.8rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+   
+}
+
+@media (max-width: 900px) {
+
+  .main-nav {
+    gap: 18px;
+  }
+
+  .main-nav a {
+    font-size: 0.68rem;
+  }
+
+}
+
+/* =========================
+   PAGE LAYOUT (BIO / STATEMENT)
+========================= */
+
+.page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 150px 30px 100px;
+}
+
+/* TITRE UNIQUE (FIXÉ) */
+.page-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #3f3f3f;
+  margin-bottom: 70px;
+}
+
+/* =========================
+   BIOGRAPHY
+========================= */
+
+.text-column {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.text-column p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.text-column p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   STATEMENT
+========================= */
+
+.statement-column {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.statement-column p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.9;
+  text-align: justify;
+  margin-bottom: var(--space-sm);
+}
+
+.statement-column p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.contact-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-soft);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-info {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.contact-info a {
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity .3s ease;
+}
+
+.contact-info a:hover {
+  opacity: .6;
+}
+
+/* =========================
+   EXHIBITIONS
+========================= */
+
+.exhibitions-page {
+  justify-content: center;
+  align-items: center;
+}
+
+.exhibitions-column {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.exhibitions-column .block {
+  margin-bottom: var(--space-sm);
+}
+
+.exhibitions-column .block {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.exhibitions-subtitle {
+  margin-top: var(--space-md);
+}
+
+/* =========================
+   COLLECTOR NOTE
+========================= */
+
+.collector-note {
+  width: 100%;
+  max-width: 650px;
+  margin: var(--space-sm) auto 0;
+  padding: 0 24px;
+  text-align: center;
+  color: var(--text-soft);
+}
+
+.collector-note p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.60;
+  letter-spacing: 0.02em;
+  color: var(--text-soft);
+}
+
+.page-content {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    margin-top: var(--space-sm);
+}
+
+/* ========================= FOOTER ========================= */ 
+.site-footer { 
+   text-align: center;
+   padding: 100px 30px 70px;
+} 
+
+.footer-text {
+   margin-bottom: 45px;
+}
+
+.copyright {
+   margin-top: 60px;
+   padding-bottom: 10px;
+   font-size: 0.75rem;
+   color: var(--text-soft);
+   line-height: 1.5;
+}
+
+/* =========================
+   MOBILE (OPTIMISÉ)
+========================= */
+
+@media (max-width: 768px) {
+ 
+.hero {
+  height: 81vh;
+}
+
+.hero-text {
+  bottom: 35px;
+}
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+   .hero-image {
+    object-fit: contain;
+  }
+
+  .main-nav {
+    gap: 12px;
+    flex-wrap: nowrap;
+    padding: 6px 10px;
+  }
+
+.main-nav a {
+  font-size: 0.62rem;
+}
+   
+  .artist-name {
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.6rem;
+  }
+
+  .gallery {
+    padding-top: 7vh;
+  }
+
+  .artwork {
+    max-width: 92vw;
+    padding: 40px 0;
+  }
+
+ .artwork-info {
+    transform: none;
+    opacity: 1;
+    margin-top: 14px;
+    background: none;
+    backdrop-filter: none;
+  }
+
+.scroll-statement {
+  padding: 80px 25px 50px;
+  font-size: clamp(0.95rem, 3.5vw, 1.2rem);
+}
+   
+  .lightbox-image {
+    max-height: 60vh;
+  }
+
+  .lb-title {
+    font-size: 1.1rem;
+  }
+
+  .lb-meta {
+    font-size: 0.8rem;
+  }
+
+  .lightbox-close {
+    font-size: 2.5rem;
+    top: 15px;
+    right: 15px;
+  }
+   
+  .page {
+    padding: 130px 20px 70px;
+    justify-content:flex-start;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+    margin-bottom: 45px;
+  }
+
+  .text-column p,
+  .statement-column p {
+    font-size: 1.05rem;
+    text-align: left;
+  }
+   
+.collector-note {
+  margin-top: 20px;
+}
+
+.collector-note p {
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (hover:none){
+    .cursor{
+        display:none;
+    }
+    body{
+        cursor:auto;
+    }
+}
+
+@media (hover:hover){
+    .artwork-info{
+        opacity:0;
+    }
+    .artwork:hover .artwork-info{
+        opacity:1;
+    }
+}
