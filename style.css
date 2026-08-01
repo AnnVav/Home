@@ -152,134 +152,87 @@ img:hover .cursor {
    HERO
 ========================= */
 
+Créer les comportements par famille d'écrans
+grand desktop panoramique : immersion maximale dans la peinture ;
+desktop plus compact : déplacement subtil du texte ;
+formats intermédiaires : protection contre les zones sombres ;
+mobile vertical : conserver l'image complète puisque tu aimes ce rendu.
+Affiner avec les vrais exemples
+ton rendu préféré devient la référence ;
+le mauvais rendu nous indique le point de rupture ;
+on ajuste les seuils de ratio et les positions.
+
+/* =========================
+   HERO ART DIRECTION
+========================= */
+
+
+/* Très grands écrans :
+   immersion maximale */
+
+@media (min-aspect-ratio: 1.8) {
+
+  .hero-text {
+    right:5vw;
+    bottom:7vh;
+  }
+
+}
+
+
+/* Formats intermédiaires */
+
+@media (max-aspect-ratio:1.8)
+and (min-aspect-ratio:1.35) {
+
+  .hero-image {
+    object-position:58% 40%;
+  }
+
+
+  .hero-text {
+
+    right:6vw;
+    bottom:10vh;
+
+  }
+
+}
+
+
+
+/* Formats plus carrés */
+
+@media (max-aspect-ratio:1.35)
+and (min-width:769px) {
+
+
 .hero {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+
+height:100svh;
+
 }
+
 
 .hero-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
-  opacity: 0;
-  transform: scale(1.02);
-  transition: opacity 2.2s ease, transform 3s ease;
+
+object-fit:contain;
+
+background:var(--bg);
+
 }
 
-.hero-image.is-visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.hero-image {
-  cursor: pointer;
-}
 
 .hero-text {
-  position: absolute;
-  right: 50px;
-  bottom: 60px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+position:absolute;
 
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1.8s ease, transform 1.8s ease;
+right:40px;
+bottom:40px;
+
 }
 
-.hero-text.is-visible{
-    opacity:1;
-    transform:translateY(0);
 }
-
-.artist-name {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.45rem, 2.3vw, 2.05rem) ;
-  color: #4A433D;
-
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  line-height: 1.05;
-
-  text-align: right;
-}
-
-.hero-title {
-  margin-top: 15px;
-
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
-  font-style: italic;
-
-  line-height: 0.95;
-  text-align: right;
-
-  color: #4A433D;
-}
-
-.hero-subtitle {
-  margin-top: 1.2rem;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.3rem;
-  font-style: italic;
-  font-weight: 300;
-  letter-spacing: 0.03em;
-  color: rgba(80,72,65,0.83);
-  line-height: 1.4;
-  text-align: right;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 220px;
-
-  pointer-events: none;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(241, 238, 232, 0) 0%,
-    rgba(241, 238, 232, 0.08) 30%,
-    rgba(241, 238, 232, 0.30) 55%,
-    rgba(241, 238, 232, 0.70) 80%,
-    var(--bg) 100%
-  );
-}
-
-.scroll-statement {
-  padding: 125px 30px 40px;
-  text-align: center;
-
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.15rem, 2vw, 1.65rem);
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: 0.02em;
-
-  color: var(--text);
-
-  opacity: 0;
-  transition: opacity 1.6s ease, transform 1.6s ease;
-}
-
-.scroll-statement.is-visible {
-  opacity: 1;
-}
-
 
 /* =========================
    GALLERY
@@ -811,6 +764,7 @@ button:focus-visible {
   }
    .hero-image {
     object-fit: contain;
+    background:var(--bg);  
   }
 
   .main-nav {
