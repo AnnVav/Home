@@ -138,12 +138,10 @@
     decoding="async"
     data-title="Le Présent (2021)"
     data-series="Series — Worlds Within Worlds"
-    data-meta="Acrylic on canvas · 60 × 73 cm"
+    data-meta="Acrylic on canvas • 60 × 73 cm"
     data-status="Private collection"
     alt="Le Présent (2021), acrylic painting by Annick Vavasseur from the Worlds Within Worlds series">
-
-<img class="hero-overlay" src="hero-title.svg" alt="">
-  
+    
       
   <div class="hero-text">
 
@@ -178,14 +176,14 @@
       src="images/annick-vavasseur-paysage-interieur-I-2016.jpg"
          data-title="Paysage intérieur I (2016)"
          data-series="Series — Worlds Within Worlds"
-         data-meta="Acrylic on canvas · 73 × 60 cm"
+         data-meta="Acrylic on canvas • 73 × 60 cm"
          data-status="Private collection"
          alt="Paysage intérieur I (2016), contemporary landscape, acrylic on canvas by Annick Vavasseur">
 
     <div class="artwork-info">
       <div class="title">Paysage intérieur I (2016)</div>
       <div class="series">Series — Worlds Within Worlds</div>
-      <div class="meta">Acrylic on canvas · 73 × 60 cm</div>
+      <div class="meta">Acrylic on canvas • 73 × 60 cm</div>
       <div class="status">Private collection</div>
     </div>
   </div>
@@ -196,14 +194,14 @@
       src="images/annick-vavasseur-back-home-2025.jpg"
          data-title="Back Home (2025)"
          data-series="Series — Worlds Within Worlds"
-         data-meta="Acrylic on canvas · 50 × 70 cm"
+         data-meta="Acrylic on canvas • 50 × 70 cm"
          data-status="Available"
          alt="Back Home (2025), inner landscape painting in acrylic on canvas by Annick Vavasseur">
 
     <div class="artwork-info">
       <div class="title">Back Home (2025)</div>
       <div class="series">Series — Worlds Within Worlds</div>
-      <div class="meta">Acrylic on canvas · 50 × 70 cm</div>
+      <div class="meta">Acrylic on canvas • 50 × 70 cm</div>
       <div class="status">Available</div>
     </div>
   </div>
@@ -214,14 +212,14 @@
       src="images/annick-vavasseur-l-ile-aux-dragons-2017.jpg"
          data-title="L’Île aux Dragons (2017)"
          data-series="Series — Worlds Within Worlds"
-         data-meta="Acrylic on canvas · 65 × 54 cm"
+         data-meta="Acrylic on canvas • 65 × 54 cm"
          data-status="Available"
          alt="L’Île aux Dragons (2017), poetic landscape painting in acrylic on canvas by Annick Vavasseur">
 
     <div class="artwork-info">
       <div class="title">L’Île aux Dragons (2017)</div>
       <div class="series">Series — Worlds Within Worlds</div>
-      <div class="meta">Acrylic on canvas · 65 × 54 cm</div>
+      <div class="meta">Acrylic on canvas • 65 × 54 cm</div>
       <div class="status">Available</div>
     </div>
   </div>
@@ -232,14 +230,14 @@
       src="images/annick-vavasseur-de-l-autre-cote-2025.jpg"
          data-title="De l’autre côté (2025)"
          data-series="Series — Worlds Within Worlds"
-         data-meta="Acrylic on canvas · 50 × 70 cm"
+         data-meta="Acrylic on canvas • 50 × 70 cm"
          data-status="Available"
          alt="De l’autre côté (2025), poetic inner landscape painting in acrylic on canvas by Annick Vavasseur">
 
     <div class="artwork-info">
       <div class="title">De l’autre côté (2025)</div>
       <div class="series">Series — Worlds Within Worlds</div>
-      <div class="meta">Acrylic on canvas · 50 × 70 cm</div>
+      <div class="meta">Acrylic on canvas • 50 × 70 cm</div>
       <div class="status">Available</div>
     </div>
   </div>
@@ -250,14 +248,14 @@
       src="images/annick-vavasseur-la-maree-2022.jpg"
          data-title="La Marée (2022)"
          data-series="Series — Worlds Within Worlds"
-         data-meta="Acrylic on canvas · 116 × 89 cm"
+         data-meta="Acrylic on canvas • 116 × 89 cm"
          data-status="Available"
          alt="La Marée (2022), contemporary inner landscape painting in acrylic on canvas by Annick Vavasseur">
 
     <div class="artwork-info">
       <div class="title">La Marée (2022)</div>
       <div class="series">Series — Worlds Within Worlds</div>
-      <div class="meta">Acrylic on canvas · 116 × 89 cm</div>
+      <div class="meta">Acrylic on canvas • 116 × 89 cm</div>
       <div class="status">Available</div>
     </div>
   </div>
@@ -268,14 +266,14 @@
       src="images/annick-vavasseur-l-ailleurs-ici-2022.jpg"
          data-title="L’Ailleurs, ici (2022)"
          data-series="Series — Elsewhere, Here"
-         data-meta="Acrylic on canvas · 81 × 65 cm"
+         data-meta="Acrylic on canvas • 81 × 65 cm"
          data-status="Private collection"
          alt="L’Ailleurs, ici (2022), poetic landscape painting in acrylic on canvas by Annick Vavasseur">
 
     <div class="artwork-info">
       <div class="title">L’Ailleurs, ici (2022)</div>
       <div class="series">Series — Elsewhere, Here</div>
-      <div class="meta">Acrylic on canvas · 81 × 65 cm</div>
+      <div class="meta">Acrylic on canvas • 81 × 65 cm</div>
       <div class="status">Private collection</div>
     </div>
     
@@ -376,16 +374,11 @@ requestAnimationFrame(() => {
 
     if (image) image.classList.add("is-visible");
 
-setTimeout(() => {
+    setTimeout(() => {
+      if (text) text.classList.add("is-visible");
+    }, 1200);
 
-  const overlay = document.querySelector(".hero-overlay");
-
-  if (overlay) {
-    overlay.classList.add("is-visible");
-  }
-
-}, 1500);
-  
+  });
 
   /* =========================
      SCROLL STATEMENT
@@ -438,7 +431,7 @@ const presentImage = document.createElement("img");
 presentImage.src = "images/annick-vavasseur-le-present-2021.jpg";
 presentImage.dataset.title = "Le Présent (2021)";
 presentImage.dataset.series = "Series — Worlds Within Worlds";
-presentImage.dataset.meta = "Acrylic on canvas · 73 × 60 cm";
+presentImage.dataset.meta = "Acrylic on canvas • 73 × 60 cm";
 presentImage.dataset.status = "Artist’s private collection";
  const images = [
   ...galleryImages,
@@ -551,7 +544,7 @@ images.forEach((img, index) => {
 });
 
 const heroImage = document.querySelector(".hero-image");
-  
+
 heroImage?.addEventListener("click", () => {
   openLightbox(images.length - 1);
 });
@@ -570,7 +563,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") prevImage();
 }
 });
-  
+
 lightbox?.addEventListener("click", (e) => {
   if (e.target === lightbox) closeLightbox();
 });
