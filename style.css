@@ -918,11 +918,14 @@ button:focus-visible {
 }
 
 
+/* ==========================================
+   HERO — écran intermédiaire
+========================================== */
 
-@media (max-aspect-ratio: 1.5) {
+@media (max-aspect-ratio: 1.65) {
 
-  .hero-text{
-      right: 70px;
+  .hero-text {
+    right: 90px;
   }
 
 }
