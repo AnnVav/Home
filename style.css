@@ -988,20 +988,24 @@ button:focus-visible {
 /* ==========================================
    NAV — petits écrans
 ========================================== */
-
-@media (max-width: 600px) {
+@media (max-width:600px) {
 
   .main-nav {
-    width: auto;
-    max-width: calc(100vw - 40px);
+    width: calc(100vw - 40px);
+    max-width: 360px;
 
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:center;
 
-    row-gap: 12px;
-    column-gap: 26px;
+    row-gap:10px;
+    column-gap:22px;
 
-    padding: 12px 20px;
+    padding:12px 18px;
+  }
+
+  .main-nav a {
+    font-size:0.62rem;
+    letter-spacing:1.2px;
   }
 
 }
