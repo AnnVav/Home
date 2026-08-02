@@ -927,7 +927,7 @@ button:focus-visible {
 
   .hero-text {
     right: 35px;
-    bottom: 60px;
+    bottom: 50px;
   }
 
   .artist-name {
@@ -946,24 +946,3 @@ button:focus-visible {
   }
 
 }
-
-@media (max-aspect-ratio: 1.15) {
-
-  .hero-text {
-    left: 50%;
-    right: auto;
-    bottom: 35px;
-    transform: translateX(-50%);
-    align-items: center;
-  }
-
-  .artist-name,
-  .hero-title,
-  .hero-subtitle {
-    text-align: center;
-  }
-
-}
-
-
-
