@@ -916,3 +916,18 @@ button:focus-visible {
         opacity:1;
     }
 }
+
+
+
+@media (max-aspect-ratio: 1.5) {
+
+  .hero-text{
+      right: 70px;
+  }
+
+}
+
+
+
+
+
