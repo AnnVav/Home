@@ -977,3 +977,24 @@ button:focus-visible {
   }
 
 }
+
+/* ==========================================
+   NAV — petits écrans
+========================================== */
+
+@media (max-width: 600px) {
+
+  .main-nav {
+    width: auto;
+    max-width: calc(100vw - 40px);
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    row-gap: 12px;
+    column-gap: 26px;
+
+    padding: 12px 20px;
+  }
+
+}
