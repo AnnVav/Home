@@ -951,12 +951,16 @@ button:focus-visible {
    HERO — bascule verticale
 ========================================== */
 
-@media (max-aspect-ratio: 1.55) {
+/* ==========================================
+   HERO — bascule verticale
+========================================== */
+
+@media (max-aspect-ratio: 1.5) {
 
   .hero-text {
     right: 35px;
-    bottom: 40px;
     left: auto;
+    bottom: 40px;
     transform: none;
     align-items: flex-end;
   }
@@ -968,7 +972,7 @@ button:focus-visible {
   }
 
   .hero-image {
-    object-position: center 35%;
+    object-position: center 40%;
   }
 
 }
