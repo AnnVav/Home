@@ -951,11 +951,11 @@ button:focus-visible {
    HERO — transition vers vertical
 ========================================== */
 
-@media (max-aspect-ratio: 1.28) {
+@media (max-aspect-ratio: 1.45) {
 
   .hero-text {
-    right: 30px;
-    bottom: 45px;
+    right: 35px;
+    bottom: 40px;
   }
 
   .artist-name {
