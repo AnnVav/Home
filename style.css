@@ -954,32 +954,33 @@ button:focus-visible {
    HERO — bascule verticale
 ========================================== */
 
+/* ==========================================
+   HERO — composition verticale (référence mobile)
+========================================== */
+
 @media (max-aspect-ratio: 1.5) {
 
-.hero {
-    height:81vh;
-  }
-   
-  .hero-text {
-    right: 35px;
-    bottom: 40px;
-    left: auto;
-    transform: translateY(0);
-    align-items: flex-end;
-  }
-
-  .artist-name {
-    transform: translateY(-30px);
-  }
-
-  .artist-name,
-  .hero-title,
-  .hero-subtitle {
-    text-align: right;
+  .hero {
+    height: 81vh;
   }
 
   .hero-image {
-    object-position: center 40%;
+    object-fit: contain;
+  }
+
+  .hero-text {
+    right: 35px;
+    bottom: 35px;
+    align-items: flex-end;
+    transform: translateY(0);
+  }
+
+  .artist-name {
+    font-size: 1.6rem;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
   }
 
 }
