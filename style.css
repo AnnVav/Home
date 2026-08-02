@@ -798,11 +798,9 @@ button:focus-visible {
 
 @media (max-width: 768px) {
 
-/*
 .hero {
-  height:81vh;
+  height:100vh;
 }
-*/
    
 .hero-text {
   bottom: 35px;
