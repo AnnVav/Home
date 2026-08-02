@@ -969,32 +969,11 @@ button:focus-visible {
 
 }
 
-/* ==========================================
-   HERO — composition verticale douce
-========================================== */
-
 @media (max-aspect-ratio: 1.45) {
 
   .hero-image {
-    object-position: center center;
-    
-    -webkit-mask-image:
-      linear-gradient(
-        to bottom,
-        transparent 0%,
-        black 12%,
-        black 88%,
-        transparent 100%
-      );
-
-    mask-image:
-      linear-gradient(
-        to bottom,
-        transparent 0%,
-        black 12%,
-        black 88%,
-        transparent 100%
-      );
+    object-position: center top;
   }
 
 }
+
