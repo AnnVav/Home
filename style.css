@@ -922,11 +922,29 @@ button:focus-visible {
    HERO — écran intermédiaire
 ========================================== */
 
+/* ==========================================
+   HERO — écrans intermédiaires
+========================================== */
+
 @media (max-aspect-ratio: 1.65) {
 
   .hero-text {
-    right: 80px;
-    bottom: 45px;
+    right: 35px;
+    bottom: 35px;
+  }
+
+  .artist-name {
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+  }
+
+  .hero-title {
+    margin-top: 22px;
+    font-size: clamp(1.1rem, 1.7vw, 1.6rem);
+  }
+
+  .hero-subtitle {
+    margin-top: 1.4rem;
+    font-size: 1.15rem;
   }
 
 }
