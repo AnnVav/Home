@@ -925,20 +925,29 @@ button:focus-visible {
 @media (max-aspect-ratio: 1.65) {
 
   .hero-text {
-    left: 60px;
+    right: 80px;
+    bottom: 45px;
+  }
+
+}
+
+@media (max-aspect-ratio: 1.15) {
+
+  .hero-text {
+    left: 50%;
     right: auto;
-    align-items: flex-start;
+    bottom: 35px;
+    transform: translateX(-50%);
+    align-items: center;
   }
 
   .artist-name,
   .hero-title,
   .hero-subtitle {
-    text-align: left;
+    text-align: center;
   }
 
 }
-
-
 
 
 
