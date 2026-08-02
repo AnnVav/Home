@@ -133,7 +133,9 @@
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <img class="hero-image" src="annick-vavasseur-le-present-2021-cover.jpg" 
+  <img class="hero-image" src="annick-vavasseur-le-present-2021-cover.jpg"
+    width="1841"
+    height="932"
     fetchpriority="high"
     decoding="async"
     data-title="Le Présent (2021)"
@@ -570,6 +572,19 @@ lightbox?.addEventListener("click", (e) => {
   
 });  
 </script>
+
+/* ==========================================
+   HERO — écrans plus carrés
+   Premier ajustement
+========================================== */
+
+@media (max-aspect-ratio: 1.5) {
+
+  .hero-text{
+    bottom: 35px;
+  }
+
+}
 
   
 </body>
