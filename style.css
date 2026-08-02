@@ -931,18 +931,18 @@ button:focus-visible {
   }
 
   .artist-name {
-    font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+    font-size: clamp(1.7rem, 2.5vw, 2.15rem);
     transform: translateY(-30px);
   }
 
   .hero-title {
     margin-top: 10px;
-    font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+    font-size: clamp(1.45rem, 2.2vw, 1.9rem);
   }
 
   .hero-subtitle {
     margin-top: 0.9rem;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
 }
