@@ -920,7 +920,7 @@ button:focus-visible {
 
 
 /* ==========================================
-   HERO — écrans intermédiaires
+   HERO — composition horizontale adaptée
 ========================================== */
 
 @media (max-aspect-ratio: 1.65) {
@@ -947,9 +947,6 @@ button:focus-visible {
 
 }
 
-/* ==========================================
-   HERO — bascule verticale
-========================================== */
 
 /* ==========================================
    HERO — bascule verticale
@@ -959,10 +956,14 @@ button:focus-visible {
 
   .hero-text {
     right: 35px;
-    left: auto;
     bottom: 40px;
+    left: auto;
     transform: none;
     align-items: flex-end;
+  }
+
+  .artist-name {
+    transform: translateY(-30px);
   }
 
   .artist-name,
