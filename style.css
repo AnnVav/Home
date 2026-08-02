@@ -801,7 +801,12 @@ button:focus-visible {
 .hero {
   height: 81vh;
 }
-
+/*
+.hero {
+  height:81vh;
+}
+*/
+   
 .hero-text {
   bottom: 35px;
 }
