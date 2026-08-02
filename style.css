@@ -948,15 +948,15 @@ button:focus-visible {
 }
 
 /* ==========================================
-   HERO — composition verticale
+   HERO — bascule verticale
 ========================================== */
 
-@media (max-aspect-ratio: 1.45) {
+@media (max-aspect-ratio: 1.55) {
 
   .hero-text {
-    left: auto;
     right: 35px;
     bottom: 40px;
+    left: auto;
     transform: none;
     align-items: flex-end;
   }
@@ -967,13 +967,8 @@ button:focus-visible {
     text-align: right;
   }
 
-}
-
-@media (max-aspect-ratio: 1.45) {
-
   .hero-image {
-    object-position: center top;
+    object-position: center 35%;
   }
 
 }
-
