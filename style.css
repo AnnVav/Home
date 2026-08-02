@@ -956,6 +956,10 @@ button:focus-visible {
 
 @media (max-aspect-ratio: 1.5) {
 
+.hero {
+    height:81vh;
+  }
+   
   .hero-text {
     right: 35px;
     bottom: 40px;
