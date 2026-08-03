@@ -154,6 +154,7 @@ img:hover .cursor {
 
 .hero {
   height: 100vh;
+  min-height: 603px;
   position: relative;
   overflow: hidden;
 }
@@ -961,10 +962,12 @@ button:focus-visible {
 
 @media (max-aspect-ratio: 1.5) {
 
+/*
   .hero {
     height: 81vh;
   }
-
+*/
+   
   .hero-image {
     object-fit: contain;
   }
