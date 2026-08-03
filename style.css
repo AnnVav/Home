@@ -958,7 +958,7 @@ button:focus-visible {
    HERO — composition verticale (référence mobile)
 ========================================== */
 
-/*
+
 @media (max-aspect-ratio: 1.5) {
 
   .hero {
@@ -985,7 +985,6 @@ button:focus-visible {
   }
 
 }
-*/
 
 @media (max-width: 720px) {
 
