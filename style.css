@@ -985,6 +985,54 @@ button:focus-visible {
 
 }
 
+@media (max-width: 720px) {
+
+  .hero {
+    height: auto;
+    padding-top: 90px;   /* espace sous la navigation */
+    padding-bottom: 30px;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .hero-text {
+    position: relative;
+    right: auto;
+    bottom: auto;
+
+    margin-top: 18px;
+    padding: 0 20px;
+
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .artist-name {
+    font-size: clamp(1.15rem, 4vw, 1.6rem);
+    line-height: 1.05;
+    transform: none;
+  }
+
+  .hero-title {
+    font-size: clamp(1rem, 3.4vw, 1.3rem);
+    margin-top: 10px;
+    transform: none;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.95rem, 3vw, 1.15rem);
+    margin-top: 0.7rem;
+    transform: none;
+  }
+
+}
+
 /* ==========================================
    NAV — petits écrans
 ========================================== */
