@@ -1009,3 +1009,30 @@ button:focus-visible {
   }
 
 }
+
+/* ==========================================
+   HERO — ajustement entre 905px et 735px
+========================================== */
+
+@media (max-width: 905px) and (min-width: 735px) {
+
+  .hero-text {
+    right: 40px;      /* décale légèrement vers la droite */
+    bottom: 80px;     /* remonte tout le bloc */
+  }
+
+  .artist-name {
+    transform: translateY(-10px); /* remonte encore un peu le nom */
+  }
+
+  .hero-title {
+    margin-top: 8px;
+    transform: translateY(-12px); /* remonte le titre */
+  }
+
+  .hero-subtitle {
+    margin-top: 0.6rem;
+    transform: translateY(-12px); /* remonte le sous-titre */
+  }
+
+}
