@@ -1014,7 +1014,7 @@ button:focus-visible {
    HERO — ajustement entre 905px et 735px
 ========================================== */
 
-@media (max-width: 905px) and (min-width: 735px) {
+@media (max-width: 905px) and (min-width: 720px) {
 
   .hero-text {
     right: 50px;      /* décale légèrement vers la droite */
