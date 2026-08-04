@@ -1070,7 +1070,7 @@ button:focus-visible {
 
   .hero-text {
     right: 40px;      /* décale légèrement vers la droite */
-    bottom: 140px;     /* remonte tout le bloc */
+    bottom: 124px;     /* remonte tout le bloc */
   }
 
   .artist-name {
