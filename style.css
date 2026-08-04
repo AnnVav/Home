@@ -1074,12 +1074,12 @@ button:focus-visible {
   }
 
   .artist-name {
-    transform: translateY(-25px); /* remonte encore un peu le nom */
+    transform: translateY(-20px); /* remonte encore un peu le nom */
   }
 
   .hero-title {
-    margin-top: 8px;
-    transform: translateY(-17px); /* remonte le titre */
+    margin-top: 9px;
+    transform: translateY(-15px); /* remonte le titre */
   }
 
   .hero-subtitle {
