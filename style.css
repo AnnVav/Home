@@ -1070,7 +1070,7 @@ button:focus-visible {
 
   .hero-text {
     right: 40px;      /* décale légèrement vers la droite */
-    bottom: 124px;     /* remonte tout le bloc */
+    bottom: 120px;     /* remonte tout le bloc */
   }
 
   .artist-name {
@@ -1078,7 +1078,7 @@ button:focus-visible {
   }
 
   .hero-title {
-    margin-top: 9px;
+    margin-top: 9.5px;
     transform: translateY(-15px); /* remonte le titre */
   }
 
