@@ -73,7 +73,7 @@ html {
   height: 6px;
   border-radius: 50%;
 
-  background: rgba(74, 67, 61, 0.35);
+  background: rgba(74, 67, 61, 0.30);
 
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -86,12 +86,12 @@ html {
   border-color: rgba(74, 67, 61, 0.25);
 }
 
-/*a:hover ~ .cursor,
+a:hover ~ .cursor,
 a:hover .cursor,
 button:hover .cursor,
 img:hover .cursor {
   opacity: 1;
-}*/
+}
 
 .cursor.hover::after {
   opacity: 1;
