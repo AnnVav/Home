@@ -1083,22 +1083,22 @@ button:focus-visible {
 @media (max-width: 910px) and (min-width: 720px) {
 
   .hero-text {
-    right: 40px;      /* décale légèrement vers la droite */
-    bottom: 124px;     /* remonte tout le bloc */
+    right: 35px;
+    bottom: 45px;
   }
 
   .artist-name {
-    transform: translateY(-20px); /* remonte encore un peu le nom */
+    transform: none;
   }
 
   .hero-title {
-    margin-top: 9.5px;
-    transform: translateY(-16px); /* remonte le titre */
+    margin-top: 10px;
+    transform: none;
   }
 
   .hero-subtitle {
-    margin-top: 0.6rem;
-    transform: translateY(-15px); /* remonte le sous-titre */
+    margin-top: 0.9rem;
+    transform: none;
   }
 
 }
