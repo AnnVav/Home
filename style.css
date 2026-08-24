@@ -995,13 +995,15 @@ button:focus-visible {
 
   .hero {
     height: auto;
-    padding-top: 70px;   
-    padding-bottom: 20px;
+    padding-top: 90px;   
+    padding-bottom: 30px;
   }
 
+   /*
 .scroll-statement {
-  padding: 35px 25px 50px;
+  padding: 40px 25px 50px;
 }
+*/
    
   .hero-image {
     position: relative;
