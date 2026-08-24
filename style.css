@@ -919,16 +919,6 @@ button:focus-visible {
     }
 }
 
-@media (hover:hover){
-    .artwork-info{
-        opacity:0;
-    }
-    .artwork:hover .artwork-info{
-        opacity:1;
-    }
-}
-
-
 
 /* ==========================================
    HERO — composition horizontale adaptée
@@ -985,15 +975,17 @@ button:focus-visible {
 
   -webkit-mask-image: linear-gradient(
     to bottom,
-    black 7%,
-    black 93%,
+    transparent 0%,
+    black 5%,
+    black 95%,
     transparent 100%
   );
 
   mask-image: linear-gradient(
     to bottom,
-    black 7%,
-    black 93%,
+    transparent 0%,
+    black 5%,
+    black 95%,
     transparent 100%
   );
 }
@@ -1126,21 +1118,25 @@ button:focus-visible {
 @media (max-width: 868px) and (min-width: 720px) {
 
   .hero-image {
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      black 0%,
-      black 95%,
-      transparent 100%
-    );
+ -webkit-mask-image: linear-gradient(
+  to bottom,
+  transparent 0%,
+  black 5%,
+  black 95%,
+  transparent 100%
+);
 
-    mask-image: linear-gradient(
-      to bottom,
-      black 0%,
-      black 95%,
-      transparent 100%
-    );
+mask-image: linear-gradient(
+  to bottom,
+  transparent 0%,
+  black 5%,
+  black 95%,
+  transparent 100%
+);
   }
+} 
 
+   
 @media (max-height: 544px) {
 
   .hero {
@@ -1161,12 +1157,6 @@ button:focus-visible {
 
   .artwork:hover .artwork-info {
     opacity: 0;
-  }
-}
-
-@media (max-width: 720px) {
-  .scroll-statement {
-    transform: translateY(-35px) !important;
   }
 }
    
