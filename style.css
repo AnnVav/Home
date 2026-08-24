@@ -953,10 +953,6 @@ button:focus-visible {
    HERO — bascule verticale
 ========================================== */
 
-/* ==========================================
-   HERO — composition verticale (référence mobile)
-========================================== */
-
 
 @media (max-aspect-ratio: 1.5) {
 
