@@ -44,10 +44,10 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
 
-  border: 1px solid rgba(74, 67, 61, 0.35);
+  border: 1px solid rgba(74, 67, 61, 0.42);
   border-radius: 50%;
 
   transform: translate(-50%, -50%);
@@ -81,16 +81,9 @@ html {
 }
 
 .cursor.hover {
-  width: 34px;
-  height: 34px;
+  width: 35px;
+  height: 35px;
   border-color: rgba(74, 67, 61, 0.25);
-}
-
-a:hover ~ .cursor,
-a:hover .cursor,
-button:hover .cursor,
-img:hover .cursor {
-  opacity: 1;
 }
 
 .cursor.hover::after {
@@ -359,7 +352,7 @@ img{
   text-align: center;
 
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.35s ease;
 
   pointer-events: none;
 }
