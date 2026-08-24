@@ -1165,20 +1165,9 @@ button:focus-visible {
 }
 
 @media (max-width: 720px) {
-
   .scroll-statement {
-    padding-top: 45px !important;
+    transform: translateY(-35px) !important;
   }
-
-}
-
-@media (max-width: 720px) {
-
-  .scroll-statement {
-    position: relative;
-    top: -35px;
-  }
-
 }
    
 }
