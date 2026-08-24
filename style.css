@@ -993,10 +993,14 @@ button:focus-visible {
 
   .hero {
     height: auto;
-    padding-top: 90px;   /* espace sous la navigation */
-    padding-bottom: 30px;
+    padding-top: 70px;   
+    padding-bottom: 20px;
   }
 
+.scroll-statement {
+  padding: 35px 25px 50px;
+}
+   
   .hero-image {
     position: relative;
     width: 100%;
