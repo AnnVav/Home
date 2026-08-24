@@ -62,13 +62,6 @@ html {
     background 0.3s ease;
 }
 
-/*a:hover ~ .cursor,
-a:hover .cursor,
-button:hover .cursor,
-img:hover .cursor {
-  opacity: 1;
-}*/
-
 /* INNER DOT */
 .cursor::after {
   content: "";
@@ -92,6 +85,13 @@ img:hover .cursor {
   height: 35px;
   border-color: rgba(74, 67, 61, 0.25);
 }
+
+/*a:hover ~ .cursor,
+a:hover .cursor,
+button:hover .cursor,
+img:hover .cursor {
+  opacity: 1;
+}*/
 
 .cursor.hover::after {
   opacity: 1;
