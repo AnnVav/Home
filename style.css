@@ -364,26 +364,10 @@ img{
   pointer-events: none;
 }
 
-/*
 .artwork:hover .artwork-info {
   opacity: 1;
 }
-*/
 
-/* =========================
-   EXPERIMENT — hide artwork info on desktop
-   Remove this block to restore previous behavior
-========================= */
-
-@media (hover: hover) {
-  .artwork-info {
-    opacity: 0;
-  }
-
-  .artwork:hover .artwork-info {
-    opacity: 0;
-  }
-}
 
 /* =========================
    TYPOGRAPHY GALLERY (scoped)
@@ -1117,3 +1101,19 @@ button:focus-visible {
   }
 
 }
+
+/* ==========================================
+   TEMPORARY — artwork info hidden on desktop
+   Remove this block to restore hover captions
+========================================== */
+
+@media (hover: hover) {
+  .artwork-info {
+    opacity: 0;
+  }
+
+  .artwork:hover .artwork-info {
+    opacity: 0;
+  }
+}
+
