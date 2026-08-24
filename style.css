@@ -347,7 +347,7 @@ img{
 
 .artwork img:hover {
   opacity: 0.98;
-  filter: brightness(1.03);
+  filter: brightness(1.04);
 }
 
 /* =========================
