@@ -342,7 +342,13 @@ img{
   object-fit: contain;
 
   cursor: pointer;
+
+  opacity: 0;
   transition: opacity 0.45s ease, filter 0.45s ease;
+}
+
+.artwork img.is-loaded {
+  opacity: 1;
 }
 
 .artwork img:hover {
