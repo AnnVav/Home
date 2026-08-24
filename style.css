@@ -364,10 +364,11 @@ img{
   pointer-events: none;
 }
 
+/*
 .artwork:hover .artwork-info {
   opacity: 1;
 }
-
+*/
 
 /* =========================
    TYPOGRAPHY GALLERY (scoped)
