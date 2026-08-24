@@ -858,7 +858,7 @@ button:focus-visible {
   }
 
 .scroll-statement {
-  padding: 80px 25px 50px;
+  padding: 65px 25px 50px;
   font-size: clamp(0.95rem, 3.5vw, 1.2rem);
 }
    
@@ -1093,6 +1093,8 @@ button:focus-visible {
 
 }
 
+
+
 /* ==========================================
    HERO — ajustement entre 905px et 735px
 ========================================== */
@@ -1120,6 +1122,25 @@ button:focus-visible {
 
 }
 
+
+@media (max-width: 868px) and (min-width: 720px) {
+
+  .hero-image {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 0%,
+      black 95%,
+      transparent 100%
+    );
+
+    mask-image: linear-gradient(
+      to bottom,
+      black 0%,
+      black 95%,
+      transparent 100%
+    );
+  }
+
 @media (max-height: 544px) {
 
   .hero {
@@ -1143,22 +1164,6 @@ button:focus-visible {
   }
 }
 
-@media (max-width: 868px) and (min-width: 720px) {
 
-  .hero-image {
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      black 0%,
-      black 95%,
-      transparent 100%
-    );
-
-    mask-image: linear-gradient(
-      to bottom,
-      black 0%,
-      black 95%,
-      transparent 100%
-    );
-  }
 
 }
