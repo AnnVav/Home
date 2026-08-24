@@ -62,6 +62,13 @@ html {
     background 0.3s ease;
 }
 
+/*a:hover ~ .cursor,
+a:hover .cursor,
+button:hover .cursor,
+img:hover .cursor {
+  opacity: 1;
+}*/
+
 /* INNER DOT */
 .cursor::after {
   content: "";
@@ -357,8 +364,25 @@ img{
   pointer-events: none;
 }
 
+/*
 .artwork:hover .artwork-info {
   opacity: 1;
+}
+*/
+
+/* =========================
+   EXPERIMENT — hide artwork info on desktop
+   Remove this block to restore previous behavior
+========================= */
+
+@media (hover: hover) {
+  .artwork-info {
+    opacity: 0;
+  }
+
+  .artwork:hover .artwork-info {
+    opacity: 0;
+  }
 }
 
 /* =========================
