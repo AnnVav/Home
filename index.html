@@ -345,21 +345,23 @@ if (cursor) {
     cursor.style.top = e.clientY + "px";
   });
 
-  const hoverTargets = document.querySelectorAll("img, a, button");
+ document.addEventListener("pointerover", (e) => {
 
-  hoverTargets.forEach(el => {
+    const target = e.target.closest("img, a, button");
 
-    el.addEventListener("mouseenter", () => {
+    if (target && !document.body.classList.contains("lightbox-active")) {
+      cursor.classList.add("hover");
+    }
 
-      if (!document.body.classList.contains("lightbox-active")) {
-        cursor.classList.add("hover");
-      }
+  });
 
-    });
+  document.addEventListener("pointerout", (e) => {
 
-    el.addEventListener("mouseleave", () => {
+    const target = e.target.closest("img, a, button");
+
+    if (target && !target.contains(e.relatedTarget)) {
       cursor.classList.remove("hover");
-    });
+    }
 
   });
 
@@ -399,6 +401,35 @@ requestAnimationFrame(() => {
   });
 
   if (statement) observer2.observe(statement);
+
+    /* =========================
+     IMAGE LOADING
+  ========================= */
+
+  const galleryImagesToLoad = document.querySelectorAll(".artwork img");
+
+  galleryImagesToLoad.forEach(img => {
+
+    const revealImage = async () => {
+
+      try {
+        if (img.decode) {
+          await img.decode();
+        }
+      } catch (e) {
+        // fallback si le navigateur ne peut pas décoder l'image
+      }
+
+      img.classList.add("is-loaded");
+    };
+
+    if (img.complete && img.naturalWidth > 0) {
+      revealImage();
+    } else {
+      img.addEventListener("load", revealImage, { once: true });
+    }
+
+  });
 
   /* =========================
      GALLERY FADE
@@ -453,11 +484,6 @@ const closeBtn = document.querySelector(".lightbox-close");
 
 let currentIndex = 0;
 
-/* PRELOAD ALL IMAGES (smooth navigation) */
-images.forEach(img => {
-  const preload = new Image();
-  preload.src = img.src;
-});
 
 /* PRELOAD ADJACENT IMAGES */
 function preloadAdjacent(index) {
