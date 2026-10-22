@@ -1177,6 +1177,15 @@ mask-image: linear-gradient(
     object-position: center;
     transform: none;
   }
+
+/* HERO — préserver l'œuvre sur les écrans panoramiques */
+@media (min-aspect-ratio: 1.9) {
+  .hero-image {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+   
 }  
    
 
