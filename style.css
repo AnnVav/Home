@@ -988,6 +988,7 @@ mask-image: linear-gradient(
   rgba(0, 0, 0, 0.15) 96%,
   transparent 100%
 );
+}
    
   .hero-text {
     right: 35px;
