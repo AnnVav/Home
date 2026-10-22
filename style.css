@@ -1179,6 +1179,13 @@ mask-image: linear-gradient(
     transform: none;
   }
 
+.hero-text {
+    right: 25px;
+    bottom: 15px;
+    transform: none;
+}
+ }
+
 /* HERO — préserver l'œuvre sur les écrans panoramiques */
 @media (min-aspect-ratio: 1.9) {
   .hero-image {
@@ -1187,6 +1194,6 @@ mask-image: linear-gradient(
   }
 }
    
-}  
+
    
 
