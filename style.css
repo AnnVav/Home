@@ -1211,9 +1211,10 @@ mask-image: linear-gradient(
 /* HERO — préserver l'œuvre sur les écrans panoramiques */
 @media (min-aspect-ratio: 1.9) {
   .hero-image {
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    object-position: center 40%;
   }
+}
 
 /* ==========================================
    HERO — position stable du texte
